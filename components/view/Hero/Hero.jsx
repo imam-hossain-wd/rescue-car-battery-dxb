@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section className="relative w-full bg-white dark:bg-[#090B0D] overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 py-12 sm:py-16 lg:py-24">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 py-12">
           {/* Left Content */}
           <div className="flex flex-col items-start text-left w-full lg:w-1/2">
             {/* Eyebrow Badge */}
@@ -79,7 +79,7 @@ export default function Hero() {
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
             <div className="relative w-full max-w-md lg:max-w-full">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-200 dark:border-gray-800">
-                <div className="aspect-[4/3] bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 flex items-center justify-center">
+                <div className="aspect-4/3 bg-linear-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 flex items-center justify-center">
                   <div className="text-center p-8">
                     <div className="text-6xl sm:text-7xl mb-4">🚗</div>
                     <p className="text-sm text-gray-500 dark:text-gray-400 font-medium">Branded Service Van</p>

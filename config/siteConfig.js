@@ -1,0 +1,123 @@
+import { RiFacebookBoxFill, RiInstagramFill, RiMailAiFill, RiMapPin2Fill, RiPhoneFill, RiPinterestFill, RiTwitterFill, RiYoutubeFill } from "@remixicon/react";
+
+export const SiteConfig = {
+  authorName: "Md Bappi",
+  brandName: "Rescue Car Battery Dubai",
+  url: "https://www.rescuecarbatterydubai.com",
+  logo: "", 
+  ogImage: "",
+  email: "rescuecarbattery@gmail.com",
+  foundedYear: "2017",
+  emailLink: "mailto:onfixcarrepair@gmail.com",
+  description:"Rescue Car Battery Dubai provides 24/7 fast, professional and reliable mobile battery replacement service at your doorstep across Dubai.",
+  displayNumber: "+054 000 0000",
+  numberCallLink: "tel:+9710000000",
+  whatsappCallLink: "https://wa.me/97100000000",
+  location: "60 Street, Nadd Hessa - Industrial Area, Dubai, UAE",
+  streetAddress: "60 Street, Nadd Hessa",
+  addressLocality: "Dubai",
+  addressRegion: "Dubai",
+  addressCountry: "AE",
+  postalCode: "00000",
+  mapsLink: "",
+  embedMap: "",
+
+  GMB: {
+    name: "OnFix Car Repair Mechanic Dubai",
+    placeId: "",
+    cid: "",
+    category: "Auto Battery Shop",
+    mapsLink: "",
+    latitude: "",
+    longitude: "",
+  },
+
+  serviceAreas: [
+    { name: "Dubai International City" },
+    { name: "Al Warqa 1" },
+    { name: "Al Warqa 2" },
+    { name: "Al Warqa 3" },
+    { name: "Mirdif" },
+    { name: "Warsan 2" },
+    { name: "Business Bay" },
+    { name: "DIFC" },
+    { name: "Zabeel Park" },
+    { name: "Al Jaddaf" },
+    { name: "Downtown Dubai" },
+    { name: "Dubai Marina" },
+  ],
+
+  operatingHours: [
+    { day: "Saturday", hours: "24 Hours" },
+    { day: "Sunday", hours: "24 Hours" },
+    { day: "Monday", hours: "24 Hours" },
+    { day: "Tuesday", hours: "24 Hours" },
+    { day: "Wednesday", hours: "24 Hours" },
+    { day: "Thursday", hours: "24 Hours" },
+    { day: "Friday", hours: "24 Hours" },
+  ],
+
+  city: "Dubai",
+  country: "UAE",
+
+  navItems: [
+    { name: "Home", href: "/" },
+    { name: "Services", href: "/services" },
+    { name: "Areas We Serve", href: "/area-we-serve" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
+    { name: "Blog", href: "/blog" },
+  ],
+
+  footerhrefs: [
+    { title: "About Us", href: "/about" },
+    { title: "Contact", href: "/contact" },
+    { title: "Services", href: "/services" },
+    { title: "Privacy Policy", href: "/privacy" },
+    { title: "Terms of Service", href: "/terms" },
+    { title: "Sitemap", href: "/sitemap.xml" },
+  ],
+
+  socialLinks: [
+    { name: "Facebook", icon: RiFacebookBoxFill, href: "" },
+    { name: "Instagram", icon: RiInstagramFill, href: "" },
+    { name: "Pinterest", icon: RiPinterestFill, href: "" },
+    { name: "X", icon: RiTwitterFill, href: "" },
+    { name: "YouTube", icon: RiYoutubeFill, href: "" },
+  ],
+
+  contactLinks: [
+    { name: "Map", icon: RiMapPin2Fill, href: ""},
+    { name: "Phone", icon: RiPhoneFill, href: "tel: "},
+    { name: "Email", icon: RiMailAiFill, href: "mailto:" },
+  ],
+};
+
+export const {
+  contactLinks,
+  socialLinks,
+  footerhrefs,
+  navItems,
+  serviceAreas,
+  location,
+  streetAddress,
+  addressLocality,
+  addressRegion,
+  addressCountry,
+  postalCode,
+  mapsLink,
+  embedMap,
+  numberCallLink,
+  whatsappCallLink,
+  operatingHours,
+  displayNumber,
+  description,
+  email,
+  url,
+  brandName,
+  authorName,
+  city,
+  country,
+  GMB,
+} = SiteConfig;
+
