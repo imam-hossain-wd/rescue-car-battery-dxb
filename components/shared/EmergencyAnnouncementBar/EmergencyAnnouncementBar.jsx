@@ -19,13 +19,13 @@ export default function EmergencyAnnouncementBar() {
   return (
     <div className="relative w-full bg-[#090B0D] dark:bg-[#090B0D] border-b border-[#FFC400]/20 overflow-hidden">
       {/* Subtle animated gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#FFC400]/5 via-transparent to-[#FFC400]/5 animate-pulse"></div>
+      <div className="absolute inset-0 bg-linear-to-r from-[#FFC400]/5 via-transparent to-[#FFC400]/5 animate-pulse"></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-2.5 sm:py-3">
           {/* Left Side - Main Message */}
           <div className="flex items-center gap-2 sm:gap-4 flex-1 min-w-0">
-            <div className="hidden sm:flex items-center gap-1.5 text-[#FFC400] flex-shrink-0">
+            <div className="hidden sm:flex items-center gap-1.5 text-[#FFC400] shrink-0">
               <RiFlashlightLine className="w-4 h-4" />
               <span className="text-[10px] font-bold uppercase tracking-wider">24/7</span>
             </div>
@@ -53,7 +53,7 @@ export default function EmergencyAnnouncementBar() {
           </div>
 
           {/* Right Side - Status & Actions */}
-          <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
             {/* Availability Status */}
             <div className="hidden sm:flex items-center gap-1.5 bg-green-500/10 border border-green-500/20 rounded-full px-3 py-1">
               <span className="relative flex h-2 w-2">

@@ -47,7 +47,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
+          <Link href="/" className="flex items-center gap-3 group shrink-0">
             <div className="relative flex items-center justify-center w-10 h-10 lg:w-12 lg:h-12 bg-[#FFC400] rounded-lg shadow-lg shadow-[#FFC400]/20 group-hover:shadow-[#FFC400]/30 transition-all duration-300">
               <RiFlashlightLine className="w-5 h-5 lg:w-6 lg:h-6 text-[#090B0D]" />
             </div>
@@ -81,7 +81,7 @@ export default function Navbar() {
           </nav>
 
           {/* Right Actions */}
-          <div className="flex items-center gap-2 lg:gap-3 flex-shrink-0">
+          <div className="flex items-center gap-2 lg:gap-3 shrink-0">
             {/* WhatsApp Button - Always Visible */}
             <Button asChild className="bg-[#25D366] hover:bg-[#25D366]/90 text-white px-3 lg:px-4 py-2 h-auto text-xs lg:text-sm font-semibold rounded-full shadow-lg shadow-[#25D366]/20 hover:shadow-[#25D366]/40 transition-all duration-200">
               <Link href="#" className="flex items-center gap-2">
