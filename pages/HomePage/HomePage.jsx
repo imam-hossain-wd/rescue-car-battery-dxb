@@ -1,3 +1,5 @@
+import BatteryBrandShowcase from '@/components/view/BatteryBrandShowcase/BatteryBrandShowcase'
+import BatteryCategories from '@/components/view/BatteryCategories/BatteryCategories'
 import CoreValueProposition from '@/components/view/CoreValueProposition/CoreValueProposition'
 import EmergencyBookingWidget from '@/components/view/EmergencyBookingWidget/EmergencyBookingWidget'
 import Hero from '@/components/view/Hero/Hero'
@@ -16,6 +18,8 @@ export default function HomePage() {
       <CoreValueProposition />
       <ServicesSection />
       <HowRescueWorks />
+      <BatteryBrandShowcase />
+      <BatteryCategories />
        </div>
   )
 }
