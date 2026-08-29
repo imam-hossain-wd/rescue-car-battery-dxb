@@ -192,25 +192,6 @@ export default function DubaiServiceAreas() {
             </p>
           </div>
         </div>
-
-        {/* Bottom CTA */}
-        <div className="text-center mt-10 sm:mt-12">
-          <div className="inline-flex flex-wrap items-center justify-center gap-4">
-            <Button asChild className="bg-[#FFC400] hover:bg-[#FFC400]/90 text-[#090B0D] font-bold px-8 py-3 rounded-full shadow-lg shadow-[#FFC400]/20 hover:shadow-[#FFC400]/40 transition-all duration-200 group">
-              <Link href="#" className="flex items-center gap-2">
-                <RiCarLine className="w-4 h-4" />
-                Get Rescue in Your Area
-                <RiArrowRightLine className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
-              </Link>
-            </Button>
-            <Button asChild variant="outline" className="border-2 border-[#090B0D] dark:border-white hover:bg-[#090B0D] hover:text-white dark:hover:bg-white dark:hover:text-[#090B0D] px-8 py-3 rounded-full font-semibold transition-all duration-200">
-              <Link href="#" className="flex items-center gap-2">
-                <RiMapPin2Line className="w-4 h-4" />
-                View All Areas
-              </Link>
-            </Button>
-          </div>
-        </div>
       </div>
     </section>
   );
