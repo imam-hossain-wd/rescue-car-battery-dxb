@@ -1,11 +1,6 @@
-import Image from "next/image";
+import HomePage from "@/pages/HomePage/HomePage";
+
 
 export default function Home() {
-  return (
-    <div>
-      <h1>
-        Hello Battery Rescue dubai,,.....
-      </h1>
-    </div>
-  );
+  return <HomePage />
 }
