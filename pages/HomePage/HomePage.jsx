@@ -1,8 +1,11 @@
+import AllCarBrands from '@/components/view/AllCarBrands/AllCarBrands'
 import BatteryBrandShowcase from '@/components/view/BatteryBrandShowcase/BatteryBrandShowcase'
 import BatteryCategories from '@/components/view/BatteryCategories/BatteryCategories'
 import CoreValueProposition from '@/components/view/CoreValueProposition/CoreValueProposition'
 import EmergencyBookingWidget from '@/components/view/EmergencyBookingWidget/EmergencyBookingWidget'
+import EmergencySituations from '@/components/view/EmergencySituations/EmergencySituations'
 import Hero from '@/components/view/Hero/Hero'
+import HonestPricing from '@/components/view/HonestPricing/HonestPricing'
 import HowRescueWorks from '@/components/view/HowRescueWorks/HowRescueWorks'
 import InstantTrustStrip from '@/components/view/InstantTrustStrip/InstantTrustStrip'
 import ServicesSection from '@/components/view/ServicesSection/ServicesSection'
@@ -20,6 +23,9 @@ export default function HomePage() {
       <HowRescueWorks />
       <BatteryBrandShowcase />
       <BatteryCategories />
+      <AllCarBrands />
+      <EmergencySituations />
+      <HonestPricing />
        </div>
   )
 }

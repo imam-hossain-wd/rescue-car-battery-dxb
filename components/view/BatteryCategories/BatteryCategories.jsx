@@ -73,7 +73,7 @@ export default function BatteryCategories() {
   ];
 
   return (
-    <section className="w-full bg-linear-to-b from-white dark:from-[#090B0D] to-gray-50 dark:to-[#0D1117] py-16 sm:py-20 lg:py-24 relative overflow-hidden">
+    <section className="w-full bg-linear-to-b from-white dark:from-[#090B0D] to-gray-50 dark:to-[#0D1117] py-8 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 bg-grid-black/[0.02] dark:bg-grid-white/[0.02]"></div>
       <div className="absolute top-0 left-0 w-96 h-96 bg-[#FFC400]/5 rounded-full blur-3xl"></div>
