@@ -2,6 +2,7 @@ import AllCarBrands from '@/components/view/AllCarBrands/AllCarBrands'
 import BatteryBrandShowcase from '@/components/view/BatteryBrandShowcase/BatteryBrandShowcase'
 import BatteryCategories from '@/components/view/BatteryCategories/BatteryCategories'
 import CoreValueProposition from '@/components/view/CoreValueProposition/CoreValueProposition'
+import DubaiServiceAreas from '@/components/view/DubaiServiceAreas/DubaiServiceAreas'
 import EmergencyBookingWidget from '@/components/view/EmergencyBookingWidget/EmergencyBookingWidget'
 import EmergencySituations from '@/components/view/EmergencySituations/EmergencySituations'
 import Hero from '@/components/view/Hero/Hero'
@@ -26,6 +27,7 @@ export default function HomePage() {
       <AllCarBrands />
       <EmergencySituations />
       <HonestPricing />
+      <DubaiServiceAreas />
        </div>
   )
 }
