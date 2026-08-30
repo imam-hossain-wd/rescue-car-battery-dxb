@@ -8,9 +8,11 @@ import CTA from '@/components/view/CTA/CTA'
 import DubaiServiceAreas from '@/components/view/DubaiServiceAreas/DubaiServiceAreas'
 import EmergencyBookingWidget from '@/components/view/EmergencyBookingWidget/EmergencyBookingWidget'
 import EmergencySituations from '@/components/view/EmergencySituations/EmergencySituations'
+import EmergencyTrustBanner from '@/components/view/EmergencyTrustBanner/EmergencyTrustBanner'
 import FAQSection from '@/components/view/FAQSection/FAQSection'
 import Hero from '@/components/view/Hero/Hero'
 import HonestPricing from '@/components/view/HonestPricing/HonestPricing'
+import HowItWorksSection from '@/components/view/HowItWorksSection/HowItWorksSection'
 import HowRescueWorks from '@/components/view/HowRescueWorks/HowRescueWorks'
 import InstantTrustStrip from '@/components/view/InstantTrustStrip/InstantTrustStrip'
 import MobileFleetTechnician from '@/components/view/MobileFleetTechnician/MobileFleetTechnician'
@@ -22,6 +24,8 @@ export default function HomePage() {
     <div>
     
       <Hero />
+      <EmergencyTrustBanner/>
+      <HowItWorksSection/>
       <InstantTrustStrip />
       <CoreValueProposition />
       <ServicesSection />
