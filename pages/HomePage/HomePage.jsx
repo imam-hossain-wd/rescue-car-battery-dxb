@@ -23,7 +23,6 @@ export default function HomePage() {
     
       <Hero />
       <InstantTrustStrip />
-      <EmergencyBookingWidget/>
       <CoreValueProposition />
       <ServicesSection />
       <HowRescueWorks />
@@ -37,6 +36,7 @@ export default function HomePage() {
       <ComparisonSection />
       <BatteryFailingSigns />
       <FAQSection />
+      <EmergencyBookingWidget/>
       <CTA />
        </div>
   )
