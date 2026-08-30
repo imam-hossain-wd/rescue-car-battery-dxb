@@ -1,5 +1,6 @@
 import AllCarBrands from '@/components/view/AllCarBrands/AllCarBrands'
 import BatteryBrandShowcase from '@/components/view/BatteryBrandShowcase/BatteryBrandShowcase'
+import BatteryCarousel from '@/components/view/BatteryCarousel/BatteryCarousel'
 import BatteryCategories from '@/components/view/BatteryCategories/BatteryCategories'
 import BatteryFailingSigns from '@/components/view/BatteryFailingSigns/BatteryFailingSigns'
 import ComparisonSection from '@/components/view/ComparisonSection/ComparisonSection'
@@ -19,6 +20,7 @@ import InstantTrustStrip from '@/components/view/InstantTrustStrip/InstantTrustS
 import MobileFleetTechnician from '@/components/view/MobileFleetTechnician/MobileFleetTechnician'
 import ServicesSection from '@/components/view/ServicesSection/ServicesSection'
 import WhoWeAre from '@/components/view/WhoWeAre/WhoWeAre'
+import WhyChooseUs from '@/components/view/WhyChooseUs/WhyChooseUs'
 import React from 'react'
 
 export default function HomePage() {
@@ -30,6 +32,8 @@ export default function HomePage() {
       <HowItWorksSection/>
       <FeaturedServices/>
       <WhoWeAre/>
+      <WhyChooseUs />
+      <BatteryCarousel/>
       <InstantTrustStrip />
       <CoreValueProposition />
       <ServicesSection />
