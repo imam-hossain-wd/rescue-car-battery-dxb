@@ -4,9 +4,11 @@ import BatteryCategories from '@/components/view/BatteryCategories/BatteryCatego
 import BatteryFailingSigns from '@/components/view/BatteryFailingSigns/BatteryFailingSigns'
 import ComparisonSection from '@/components/view/ComparisonSection/ComparisonSection'
 import CoreValueProposition from '@/components/view/CoreValueProposition/CoreValueProposition'
+import CTA from '@/components/view/CTA/CTA'
 import DubaiServiceAreas from '@/components/view/DubaiServiceAreas/DubaiServiceAreas'
 import EmergencyBookingWidget from '@/components/view/EmergencyBookingWidget/EmergencyBookingWidget'
 import EmergencySituations from '@/components/view/EmergencySituations/EmergencySituations'
+import FAQSection from '@/components/view/FAQSection/FAQSection'
 import Hero from '@/components/view/Hero/Hero'
 import HonestPricing from '@/components/view/HonestPricing/HonestPricing'
 import HowRescueWorks from '@/components/view/HowRescueWorks/HowRescueWorks'
@@ -34,6 +36,8 @@ export default function HomePage() {
       <MobileFleetTechnician />
       <ComparisonSection />
       <BatteryFailingSigns />
+      <FAQSection />
+      <CTA />
        </div>
   )
 }
