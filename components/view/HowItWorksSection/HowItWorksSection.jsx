@@ -87,7 +87,7 @@ export default function HowItWorksSection() {
           {/* Connecting Line */}
           <div className="absolute left-1/2 top-12 bottom-12 w-0.5 bg-linear-to-b from-[#FFC400]/20 via-[#FFC400]/40 to-[#FFC400]/20 transform -translate-x-1/2"></div>
           
-          <div className="space-y-12">
+          <div className="space-y-2">
             {steps.map((step, index) => (
               <div key={index} className="relative">
                 <div className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} gap-12`}>

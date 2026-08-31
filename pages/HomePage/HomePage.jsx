@@ -1,8 +1,10 @@
 import AllCarBrands from '@/components/view/AllCarBrands/AllCarBrands'
+import AreasWeServe from '@/components/view/AreasWeServe/AreasWeServe'
 import BatteryBrandShowcase from '@/components/view/BatteryBrandShowcase/BatteryBrandShowcase'
 import BatteryCarousel from '@/components/view/BatteryCarousel/BatteryCarousel'
 import BatteryCategories from '@/components/view/BatteryCategories/BatteryCategories'
 import BatteryFailingSigns from '@/components/view/BatteryFailingSigns/BatteryFailingSigns'
+import CarBrands from '@/components/view/CarBrands/CarBrands'
 import ComparisonSection from '@/components/view/ComparisonSection/ComparisonSection'
 import CoreValueProposition from '@/components/view/CoreValueProposition/CoreValueProposition'
 import CTA from '@/components/view/CTA/CTA'
@@ -18,6 +20,7 @@ import HowItWorksSection from '@/components/view/HowItWorksSection/HowItWorksSec
 import HowRescueWorks from '@/components/view/HowRescueWorks/HowRescueWorks'
 import InstantTrustStrip from '@/components/view/InstantTrustStrip/InstantTrustStrip'
 import MobileFleetTechnician from '@/components/view/MobileFleetTechnician/MobileFleetTechnician'
+import Reviews from '@/components/view/Reviews/Reviews'
 import ServicesSection from '@/components/view/ServicesSection/ServicesSection'
 import WhoWeAre from '@/components/view/WhoWeAre/WhoWeAre'
 import WhyChooseUs from '@/components/view/WhyChooseUs/WhyChooseUs'
@@ -34,9 +37,12 @@ export default function HomePage() {
       <WhoWeAre/>
       <WhyChooseUs />
       <BatteryCarousel/>
-      <InstantTrustStrip />
-      <CoreValueProposition />
-      <ServicesSection />
+      <CarBrands/>
+      <AreasWeServe />
+      <Reviews/>
+      {/* <InstantTrustStrip /> */}
+      {/* <CoreValueProposition /> */}
+      {/* <ServicesSection /> */}
       <HowRescueWorks />
       <BatteryBrandShowcase />
       <BatteryCategories />
