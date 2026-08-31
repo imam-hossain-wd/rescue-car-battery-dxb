@@ -31,7 +31,7 @@ export default function Navbar() {
     { name: "Battery Services", href: "/services" },
     { name: "Battery Brands", href: "/battery-brands" },
     { name: "Car Brands", href: "/car-brands" },
-    { name: "Dubai Areas", href: "/areas" },
+    { name: "Dubai Areas", href: "/service-area" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
