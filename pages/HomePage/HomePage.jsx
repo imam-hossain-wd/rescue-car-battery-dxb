@@ -1,3 +1,4 @@
+import Maps from '@/components/shared/Maps/Maps'
 import AllCarBrands from '@/components/view/AllCarBrands/AllCarBrands'
 import AreasWeServe from '@/components/view/AreasWeServe/AreasWeServe'
 import BatteryBrandShowcase from '@/components/view/BatteryBrandShowcase/BatteryBrandShowcase'
@@ -38,6 +39,7 @@ export default function HomePage() {
       <WhyChooseUs />
       <BatteryCarousel/>
       <CarBrands/>
+      <Maps/>
       <AreasWeServe />
       <Reviews/>
       {/* <InstantTrustStrip /> */}
