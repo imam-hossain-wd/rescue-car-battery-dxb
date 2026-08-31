@@ -29,7 +29,7 @@ export default function Navbar() {
   const navItems = [
     { name: "Home", href: "/" },
     { name: "Battery Services", href: "/services" },
-    { name: "Battery Brands", href: "/brands" },
+    { name: "Battery Brands", href: "/battery-brands" },
     { name: "Car Brands", href: "/car-brands" },
     { name: "Dubai Areas", href: "/areas" },
     { name: "About", href: "/about" },
