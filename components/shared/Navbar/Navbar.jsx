@@ -72,7 +72,7 @@ export default function Navbar() {
                 className={`px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
                   pathname === item.href
                     ? "text-[#FFC400] bg-[#FFC400]/10"
-                    : "text-gray-600 dark:text-gray-300 hover:text-[#FFC400] hover:bg-[#FFC400]/5"
+                    : "text-black font-semibold dark:text-gray-300 hover:text-[#FFC400] hover:bg-[#FFC400]/5"
                 }`}
               >
                 {item.name}
