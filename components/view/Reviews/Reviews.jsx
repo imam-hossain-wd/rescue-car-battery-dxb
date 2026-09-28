@@ -146,7 +146,7 @@ export default function Reviews({
 
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
         {/* ============ HEADER (editorial 2-col) ============ */}
-        <header className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-6 lg:gap-12 items-end mb-12 sm:mb-16">
+        <header className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-6 lg:gap-12 items-end mb-8">
           <div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.1]">
