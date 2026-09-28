@@ -1,12 +1,8 @@
 import Maps from '@/components/shared/Maps/Maps'
-import AllCarBrands from '@/components/view/AllCarBrands/AllCarBrands'
-import AreasWeServe from '@/components/view/AreasWeServe/AreasWeServe'
 import BatteryBrandsSection from '@/components/view/BatteryBrandShowcase/BatteryBrands'
-import BatteryBrandShowcase from '@/components/view/BatteryBrandShowcase/BatteryBrandShowcase'
-import BatteryCarousel from '@/components/view/BatteryCarousel/BatteryCarousel'
 import BatteryCategories from '@/components/view/BatteryCategories/BatteryCategories'
 import BatteryFailingSigns from '@/components/view/BatteryFailingSigns/BatteryFailingSigns'
-import CarBrands from '@/components/view/CarBrands/CarBrands'
+import CarBrandsTabs from '@/components/view/CarBrandsTabs/CarBrandsTabs'
 import ComparisonSection from '@/components/view/ComparisonSection/ComparisonSection'
 import CTA from '@/components/view/CTA/CTA'
 import DubaiServiceAreas from '@/components/view/DubaiServiceAreas/DubaiServiceAreas'
@@ -31,21 +27,18 @@ export default function HomePage() {
       <Hero />
       <HowItWorksSection/>
       <FeaturedServices/>
+      <BatteryBrandsSection />
+      <CarBrandsTabs />
       <WhoWeAre/>
       <WhyChooseUs />
-      <BatteryBrandsSection />
-      <BatteryCarousel/>
-      <CarBrands/>
       <Maps/>
-      <AreasWeServe />
       <Reviews/>
       {/* <InstantTrustStrip /> */}
       {/* <CoreValueProposition /> */}
       {/* <ServicesSection /> */}
-      <HowRescueWorks />
-      <BatteryBrandShowcase />
+      {/* <HowRescueWorks /> */}
       <BatteryCategories />
-      <AllCarBrands />
+      {/* <AllCarBrands /> */}
       <EmergencySituations />
       <HonestPricing />
       <DubaiServiceAreas />
