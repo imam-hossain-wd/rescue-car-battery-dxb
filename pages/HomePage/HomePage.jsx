@@ -31,15 +31,15 @@ export default function HomePage() {
       <CarBrandsTabs />
       <WhoWeAre/>
       <WhyChooseUs />
-      <Reviews/>
       <BatteryCategories />
       <DubaiServiceAreas />
       <ComparisonSection />
       <BatteryFailingSigns />
       <Maps/>
+      <Reviews/>
       <EmergencyBookingWidget/>
       <FAQSection />
-      <CTA />
+      {/* <CTA /> */}
        </div>
   )
 }

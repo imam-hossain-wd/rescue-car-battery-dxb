@@ -269,7 +269,7 @@ export default function DubaiServiceAreas() {
                 </div>
               </div>
 
-              <Button
+              {/* <Button
                 
                 className="group h-11 shrink-0 rounded-full bg-[#FFC400] px-6 text-sm font-bold text-[#090B0D]  transition-all duration-300 hover:bg-[#FFC400]/95 "
               >
@@ -277,7 +277,7 @@ export default function DubaiServiceAreas() {
                   Request Service
                   <RiArrowRightLine className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>

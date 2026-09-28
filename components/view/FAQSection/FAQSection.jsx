@@ -154,7 +154,7 @@ export default function FAQSection() {
         {/* ============ MAIN GRID ============ */}
         <div className="mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-6 lg:gap-8 items-start">
           {/* ---------- LEFT: Sticky Contact Panel ---------- */}
-          <aside className="lg:sticky lg:top-8 space-y-4">
+          <aside className="hidden lg:flex flex-col lg:sticky lg:top-8 space-y-4">
             {/* Contact card (featured) */}
             <div className="relative overflow-hidden rounded-3xl border border-[#FFC400]/25 bg-gradient-to-br from-[#FFC400]/[0.08] via-white/[0.02] to-transparent backdrop-blur-xl p-6">
               <div className="absolute top-0 inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-[#FFC400] to-transparent" />

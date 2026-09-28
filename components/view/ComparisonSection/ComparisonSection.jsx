@@ -77,11 +77,11 @@ export default function ComparisonSection() {
   title: "Genuine Batteries Only",
   text: "Authorized stock from Bosch, Varta, Amaron & more — zero counterfeits.",
 },
-{
-  icon: RiMoneyDollarCircleLine,
-  title: "Upfront Fixed Pricing",
-  text: "You approve the exact price before we dispatch. No surprises on arrival.",
-},
+// {
+//   icon: RiMoneyDollarCircleLine,
+//   title: "Upfront Fixed Pricing",
+//   text: "You approve the exact price before we dispatch. No surprises on arrival.",
+// },
     {
       icon: RiToolsLine,
       title: "Done in One Visit",
@@ -200,7 +200,7 @@ export default function ComparisonSection() {
             </div>
 
             {/* Footer CTA */}
-            <div className="relative flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-white/[0.06] bg-gradient-to-r from-[#FFC400]/[0.06] to-transparent px-4 sm:px-5 py-4">
+            {/* <div className="relative flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-white/[0.06] bg-gradient-to-r from-[#FFC400]/[0.06] to-transparent px-4 sm:px-5 py-4">
               <p className="text-xs sm:text-sm text-zinc-400 text-center sm:text-left">
                 <span className="font-semibold text-[#FFC400]">
                   No towing.
@@ -222,7 +222,7 @@ export default function ComparisonSection() {
                   <RiArrowRightLine className="h-3.5 w-3.5 transition-transform duration-300 group-hover/btn:translate-x-0.5" />
                 </Link>
               </Button>
-            </div>
+            </div> */}
           </div>
 
           {/* ---------- RIGHT: Trust Panel ---------- */}

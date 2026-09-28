@@ -20,7 +20,7 @@ export default function BatteryBrandsSection() {
   const marqueeBrands = [...batteryImages, ...batteryImages];
 
   return (
-    <section className="w-full bg-[#090B0D] py-16 relative overflow-hidden">
+    <section className="w-full bg-[#090B0D] py-10 relative overflow-hidden">
       {/* Grid pattern */}
       <div className="absolute inset-0 bg-grid-white/[0.03]"></div>
 
@@ -35,14 +35,14 @@ export default function BatteryBrandsSection() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 bg-[#FFC400]/10 border border-[#FFC400]/30 rounded-full px-4 py-1.5 mb-5 backdrop-blur-sm">
+        <div className="text-center max-w-3xl mx-auto mb-8">
+          {/* <div className="inline-flex items-center gap-2 bg-[#FFC400]/10 border border-[#FFC400]/30 rounded-full px-4 py-1.5 mb-5 backdrop-blur-sm">
             <span className="w-1.5 h-1.5 rounded-full bg-[#FFC400] animate-pulse"></span>
             <RiBattery2Line className="w-3.5 h-3.5 text-[#FFC400]" />
             <span className="text-[10px] font-bold text-[#FFC400] uppercase tracking-widest">
               Premium Battery Brands
             </span>
-          </div>
+          </div> */}
 
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 leading-tight">
             Genuine OEM & Premium Battery Brands{" "}
@@ -69,7 +69,7 @@ export default function BatteryBrandsSection() {
           </p>
 
           {/* Stat chips */}
-          <div className="flex flex-wrap items-center justify-center gap-2.5 mt-6">
+          <div className="flex flex-wrap items-center justify-center gap-2.5 mt-3">
             <span className="inline-flex items-center gap-1.5 bg-white/5 border border-white/10 rounded-full px-3 py-1 text-[11px] font-medium text-gray-300 backdrop-blur-sm hover:border-[#FFC400]/30 hover:text-[#FFC400] transition-colors duration-300">
               <RiAwardLine className="w-3 h-3 text-[#FFC400]" />
               {batteryImages.length}+ Brands
@@ -86,7 +86,7 @@ export default function BatteryBrandsSection() {
         </div>
 
         {/* Brands Grid - Desktop */}
-        <div className="hidden md:grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-3 sm:gap-4 max-w-7xl mx-auto mb-10">
+        <div className="grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-3 sm:gap-4 max-w-7xl mx-auto mb-10">
           {batteryImages.slice(0,21).map((image, index) => (
             <div
               key={index}
@@ -120,32 +120,8 @@ export default function BatteryBrandsSection() {
           ))}
         </div>
 
-        {/* Brands Marquee - Mobile */}
-        <div className="md:hidden relative mb-10 -mx-4 sm:-mx-6 lg:-mx-8">
-          {/* Fade edges */}
-          <div className="absolute left-0 top-0 bottom-0 w-16 bg-linear-to-r from-[#090B0D] to-transparent z-10 pointer-events-none"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-16 bg-linear-to-l from-[#090B0D] to-transparent z-10 pointer-events-none"></div>
-
-          <div className="flex gap-3 animate-[scroll_40s_linear_infinite] w-max">
-            {marqueeBrands.map((image, index) => (
-              <div
-                key={index}
-                className="shrink-0 bg-linear-to-b from-white/[0.06] to-white/[0.02] rounded-xl p-4 border border-white/8 flex items-center justify-center w-32 h-24"
-              >
-                <Image
-                  src={image}
-                  alt={`Battery brand mobile ${index + 1}`}
-                  width={100}
-                  height={60}
-                  className="object-contain w-auto h-auto max-w-full max-h-full"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Bottom Info Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto mb-5">
           <div className="bg-linear-to-b from-white/[0.06] to-white/[0.02] backdrop-blur-sm rounded-2xl p-4 border border-white/8 flex items-start gap-3">
             <div className="w-9 h-9 rounded-lg bg-[#FFC400]/10 flex items-center justify-center shrink-0">
               <RiShieldCheckLine className="w-4 h-4 text-[#FFC400]" />
@@ -189,40 +165,7 @@ export default function BatteryBrandsSection() {
           </div>
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center">
-          <div className="inline-flex flex-wrap items-center justify-center gap-3">
-            <Button
-              asChild
-              className="bg-[#FFC400] hover:bg-[#FFC400]/90 text-[#090B0D] font-bold px-7 py-3 rounded-full shadow-lg shadow-[#FFC400]/30 hover:shadow-[#FFC400]/60 transition-all duration-300 group text-sm"
-            >
-              <Link href="/battery-brands" className="flex items-center gap-2">
-                <RiBattery2Line className="w-4 h-4" />
-                View All Brands
-                <RiArrowRightLine className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-200" />
-              </Link>
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              className="border-2 border-white/20 hover:bg-white/10 hover:border-white/40 text-white px-7 py-3 rounded-full font-semibold transition-all duration-300 text-sm backdrop-blur-sm"
-            >
-              <Link href="/contact" className="flex items-center gap-2">
-                <RiCustomerService2Line className="w-4 h-4" />
-                Get Battery Advice
-              </Link>
-            </Button>
-          </div>
 
-          <p className="text-[11px] text-gray-500 mt-6 flex items-center justify-center gap-2">
-            <span className="inline-block w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse shadow-lg shadow-green-500/50"></span>
-            <span className="font-medium text-gray-400">
-              {batteryImages.length} brands available
-            </span>
-            <span className="w-px h-3 bg-white/10"></span>
-            <span>Free BMS coding included with every install</span>
-          </p>
-        </div>
       </div>
 
       {/* Marquee keyframes */}

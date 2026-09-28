@@ -8,6 +8,7 @@ import {
   chineseBrands,
   japaneseBrands,
   otherBrands,
+  allCarBrands,
 } from "@/config/imageConfig";
 
 
@@ -89,9 +90,9 @@ export default function CarBrandsTabs() {
 
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
         {/* ---------- Header ---------- */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
+        <div className="text-center max-w-3xl mx-auto mb-8">
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-[1.15] tracking-tight">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white leading-[1.15] tracking-tight">
             Specialized Battery Replacement &{" "}
             <span className="relative inline-block text-[#FFC400]">
               ECU Registration
@@ -114,7 +115,7 @@ export default function CarBrandsTabs() {
         </div>
 
         {/* ---------- Filter Tabs ---------- */}
-        <div className="flex flex-wrap items-center justify-center gap-2.5 mb-10 max-w-5xl mx-auto">
+        {/* <div className="flex flex-wrap items-center justify-center gap-2.5 mb-10 max-w-5xl mx-auto">
           {tabs.map((tab) => {
             const isActive = activeTab === tab.id;
             return (
@@ -141,7 +142,7 @@ export default function CarBrandsTabs() {
               </button>
             );
           })}
-        </div>
+        </div> */}
 
         {/* ---------- Showcase Panel ---------- */}
         <div className="max-w-6xl mx-auto">
@@ -164,21 +165,21 @@ export default function CarBrandsTabs() {
 
             <div className="relative z-10 p-6 sm:p-8 lg:p-10">
               {/* Specialty note */}
-              <div className="flex items-start gap-3 mb-7 max-w-3xl">
+              {/* <div className="flex items-start gap-3 mb-7 max-w-3xl">
                 <span
                   className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0 transition-colors duration-500 bg-yellow-300"
                 />
                 <p className="text-sm sm:text-[15px] leading-relaxed text-gray-400">
                   {active.specialty}
                 </p>
-              </div>
+              </div> */}
 
               {/* Divider */}
-              <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-7" />
+              {/* <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-7" /> */}
 
               {/* Brand Grid */}
               <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-3 sm:gap-4">
-                {active.brands.map((brand, index) => (
+                {allCarBrands.map((brand, index) => (
                   <div
                     key={`${active.id}-${index}`}
                     className="group/logo relative flex flex-col items-center justify-center aspect-square rounded-2xl border border-white/[0.07] bg-white/[0.06] hover:border-white/20 transition-all duration-300 hover:-translate-y-1 overflow-hidden"
@@ -203,7 +204,7 @@ export default function CarBrandsTabs() {
                     </div>
 
                     {/* Brand name */}
-                    <span className="relative z-10 mt-1 text-sm font-medium text-white transition-colors duration-300 truncate max-w-[90%] text-center">
+                    <span className="relative z-10 mt-1 text-xs md:text-sm font-medium text-white transition-colors duration-300 truncate max-w-[90%] text-center">
                       {brand.name}
                     </span>
                   </div>

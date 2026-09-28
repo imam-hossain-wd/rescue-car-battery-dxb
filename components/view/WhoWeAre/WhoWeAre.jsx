@@ -87,7 +87,7 @@ export default function WhoWeAre() {
           <div className="order-2 lg:order-1">
             <div className="relative">
               {/* Main Image Card */}
-              <div className="relative rounded-3xl overflow-hidden border border-gray-200 w-150 h-115 dark:border-white/10 shadow-2xl">
+              <div className="relative rounded-3xl overflow-hidden border border-gray-200 w-full md:w-150 h-105 md:h-115 dark:border-white/10 shadow-2xl">
                 <Image
                   className="w-full h-full"
                   width={500}

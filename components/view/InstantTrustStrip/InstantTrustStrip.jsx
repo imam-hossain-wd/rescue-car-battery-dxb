@@ -42,7 +42,7 @@ export default function InstantTrustStrip() {
 
   return (
     <section className="w-full bg-linear-to-br from-[#090B0D] via-[#0D1117] to-[#090B0D] border-y border-[#FFC400]/10">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Main Heading */}
         <div className="text-center mb-8 sm:mb-10 lg:mb-12">
           <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white tracking-tight">
@@ -66,12 +66,12 @@ export default function InstantTrustStrip() {
               </div>
 
               {/* Label */}
-              <div className="text-base sm:text-lg lg:text-xl font-bold text-white mb-0.5 sm:mb-1">
+              <div className="text-sm md:text-md lg:text-xl font-bold text-white mb-0.5 sm:mb-1">
                 {item.label}
               </div>
 
               {/* Description */}
-              <div className="text-xs sm:text-sm text-gray-400 font-medium">
+              <div className="text-xs md:text-sm text-gray-400 font-medium">
                 {item.description}
               </div>
             </div>
