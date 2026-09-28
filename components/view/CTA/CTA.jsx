@@ -1,104 +1,141 @@
 "use client";
 
-import { 
-  RiWhatsappLine, 
-  RiCustomerService2Line, 
-  RiFlashlightLine,
+import {
+  RiWhatsappLine,
+  RiPhoneFill,
+  RiArrowRightLine,
   RiMapPin2Line,
   RiShieldCheckLine,
+  RiFlashlightLine,
   RiSettings4Line,
-  RiArrowRightLine
 } from "@remixicon/react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { SiteConfig } from "@/config/siteConfig";
+import { cn } from "@/lib/utils";
 
 export default function CTA() {
-  return (
-    <section className="w-full relative overflow-hidden">
-      {/* Dark Background with subtle gradient */}
-      <div className="absolute inset-0 bg-[#090B0D]"></div>
-      
-      {/* Background pattern/grid */}
-      <div className="absolute inset-0 bg-grid-white/[0.03]"></div>
-      
-      {/* Background decorative elements */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-[#FFC400]/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#FFC400]/10 rounded-full blur-3xl"></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#FFC400]/5 rounded-full blur-3xl"></div>
-      
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Small Badge */}
-          <div className="inline-flex items-center gap-2 bg-[#FFC400]/10 border border-[#FFC400]/20 rounded-full px-4 py-1.5 mb-6">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-            </span>
-            <span className="text-xs font-semibold text-[#FFC400] uppercase tracking-wider">
-              24/7 EMERGENCY BATTERY RESCUE
-            </span>
-          </div>
+  const { whatsappCallLink, numberCallLink } = SiteConfig;
 
-          {/* Main Heading */}
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-tight">
-            Dead Battery? <br className="sm:hidden" />
-            <span className="text-[#FFC400]">Don't Wait for a Tow Truck.</span>
+  const trustItems = [
+    { icon: RiFlashlightLine, label: "24/7 Response" },
+    { icon: RiMapPin2Line, label: "All Dubai" },
+    { icon: RiShieldCheckLine, label: "Genuine Batteries" },
+    { icon: RiSettings4Line, label: "Mobile Fitting" },
+  ];
+
+  return (
+    <section className="relative w-full overflow-hidden bg-[#090B0D] py-8">
+      {/* ---- Background layers ---- */}
+      <div
+        className="absolute inset-0 opacity-[0.035] pointer-events-none"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px)",
+          backgroundSize: "56px 56px",
+          maskImage:
+            "radial-gradient(ellipse 70% 60% at 50% 50%, #000 40%, transparent 100%)",
+        }}
+      />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[900px] rounded-full bg-[#FFC400]/[0.08] blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 h-[300px] w-[300px] rounded-full bg-[#25D366]/[0.05] blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-0 h-[300px] w-[300px] rounded-full bg-[#FFC400]/[0.05] blur-3xl pointer-events-none" />
+
+      {/* Hairlines */}
+      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#FFC400]/40 to-transparent" />
+      <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#FFC400]/20 to-transparent" />
+
+      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl text-center">
+
+
+          {/* ---- Headline ---- */}
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.1]">
+            Dead battery?{" "}
+            <span className="relative inline-block text-[#FFC400]">
+              Skip the tow.
+              <svg
+                className="absolute -bottom-1.5 left-0 w-full h-2"
+                viewBox="0 0 200 8"
+                fill="none"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M0 4C50 8 150 8 200 4"
+                  stroke="#FFC400"
+                  strokeWidth="2"
+                  opacity="0.4"
+                />
+              </svg>
+            </span>
           </h2>
 
-          {/* Subheading */}
-          <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto mb-8 sm:mb-10">
-            Send us your location and vehicle details. We'll help you find the right battery and dispatch the nearest available mobile technician.
+          {/* ---- Subheading ---- */}
+          <p className="mt-5 text-sm sm:text-base text-zinc-400 max-w-xl mx-auto leading-relaxed">
+            Send your location on WhatsApp. We'll match the right battery and
+            dispatch the nearest available technician.
           </p>
 
-          {/* Main CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 mb-8 sm:mb-10">
-            <Button  className="bg-[#25D366] hover:bg-[#25D366]/90 text-white font-bold px-8 sm:px-10 py-4 sm:py-5 rounded-full text-base sm:text-lg shadow-lg shadow-[#25D366]/30 hover:shadow-[#25D366]/50 transition-all duration-200 group w-full sm:w-auto">
-              <Link href="#" className="flex items-center justify-center gap-2">
-                <RiWhatsappLine className="w-5 h-5 sm:w-6 sm:h-6" />
-                WhatsApp for Immediate Help
-                <RiArrowRightLine className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
+          {/* ---- Buttons ---- */}
+          <div className="mt-5 flex flex-col sm:flex-row items-center justify-center gap-3">
+            {/* Primary: WhatsApp */}
+            <Button
+              asChild
+              className={cn(
+                "group/btn h-11 w-full sm:w-auto rounded-full bg-[#25D366] px-6 text-sm font-bold text-white hover:bg-green-600",
+                "transition-all duration-300",
+                "hover:-translate-y-0.5",
+              )}
+            >
+              <Link
+                href={whatsappCallLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2"
+              >
+                <RiWhatsappLine className="h-5 w-5" />
+                WhatsApp Us Now
+                <RiArrowRightLine className="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
               </Link>
             </Button>
-            
-            <Button className="bg-[#FFC400] hover:bg-[#FFC400]/90 text-[#090B0D] font-bold px-8 sm:px-10 py-4 sm:py-5 rounded-full text-base sm:text-lg shadow-lg shadow-[#FFC400]/30 hover:shadow-[#FFC400]/50 transition-all duration-200 group w-full sm:w-auto">
-              <Link href="#" className="flex items-center justify-center gap-2">
-                <RiCustomerService2Line className="w-5 h-5 sm:w-6 sm:h-6" />
-                Call Rescue Team
-                <RiArrowRightLine className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
+
+            {/* Secondary: Call */}
+            <Button
+              
+              variant="ghost"
+              className={cn(
+                "group/btn h-11 w-full sm:w-auto rounded-full border border-white/15 bg-white/[0.03] px-7 text-sm font-bold text-white",
+                "transition-all duration-300",
+                "hover:border-[#FFC400]/50 hover:bg-[#FFC400]/10 hover:text-[#FFC400]",
+              )}
+            >
+              <Link
+                href={numberCallLink}
+                className="flex items-center justify-center gap-2"
+              >
+                <RiPhoneFill className="h-4 w-4" />
+                Or Call Directly
               </Link>
             </Button>
           </div>
 
-          {/* Trust Indicators */}
-          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 pt-6 sm:pt-8 border-t border-white/10">
-            <span className="flex items-center gap-2 text-sm text-gray-300">
-              <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
-              Available 24/7
-            </span>
-            <span className="flex items-center gap-2 text-sm text-gray-300">
-              <RiMapPin2Line className="w-4 h-4 text-[#FFC400]" />
-              All Dubai
-            </span>
-            <span className="flex items-center gap-2 text-sm text-gray-300">
-              <RiShieldCheckLine className="w-4 h-4 text-[#FFC400]" />
-              Genuine Batteries
-            </span>
-            <span className="flex items-center gap-2 text-sm text-gray-300">
-              <RiSettings4Line className="w-4 h-4 text-[#FFC400]" />
-              Mobile Installation
-            </span>
+          {/* ---- Trust strip ---- */}
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-x-5 gap-y-3 pt-6 border-t border-white/[0.06]">
+            {trustItems.map((item) => {
+              const Icon = item.icon;
+              return (
+                <span
+                  key={item.label}
+                  className="inline-flex items-center gap-2 text-xs text-zinc-400"
+                >
+                  <Icon className="h-3.5 w-3.5 text-[#FFC400]" />
+                  {item.label}
+                </span>
+              );
+            })}
           </div>
-
-          {/* Emergency Note */}
-          <p className="text-xs text-gray-500 mt-6">
-            🚨 Emergency response available 24/7 • Average response time 5-15 minutes*
-          </p>
         </div>
       </div>
-
-      {/* Bottom glow effect */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#FFC400]/30 to-transparent"></div>
     </section>
   );
 }

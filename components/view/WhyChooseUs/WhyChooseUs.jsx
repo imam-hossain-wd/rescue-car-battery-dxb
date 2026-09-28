@@ -88,7 +88,7 @@ export default function WhyChooseUs() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
+        <div className="text-center max-w-3xl mx-auto mb-8">
           {/* <div className="inline-flex items-center gap-2 bg-[#FFC400]/10 border border-[#FFC400]/30 rounded-full px-4 py-1.5 mb-5 backdrop-blur-sm">
             <span className="w-1.5 h-1.5 rounded-full bg-[#FFC400] animate-pulse"></span>
             <RiAwardLine className="w-3.5 h-3.5 text-[#FFC400]" />
@@ -188,8 +188,8 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-14">
-          <div className="inline-flex flex-wrap items-center justify-center gap-3">
+        <div className="text-center mt-8">
+          {/* <div className="inline-flex flex-wrap items-center justify-center gap-3">
             <Button
               className="bg-[#FFC400] hover:bg-[#FFC400]/90 text-[#090B0D] font-bold px-7 py-3 rounded-full shadow-lg shadow-[#FFC400]/30 hover:shadow-[#FFC400]/60 transition-all duration-300 group text-sm"
             >
@@ -209,12 +209,12 @@ export default function WhyChooseUs() {
                 Check Availability
               </Link>
             </Button>
-          </div>
+          </div> */}
 
           {/* Trust indicators */}
-          <div className="flex flex-wrap items-center justify-center gap-4 mt-6 text-[11px] text-gray-500">
+          <div className="flex flex-wrap items-center justify-center gap-4 mt- text-[11px] text-gray-500">
             <span className="flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse shadow-lg shadow-green-500/50"></span>
+              <span className="w-1.5 h-1.5 bg-yellow-400 rounded-full animate-pulse shadow-lg shadow-green-500/50"></span>
               <span className="font-medium text-gray-400">24/7 Emergency</span>
             </span>
             <span className="w-px h-3 bg-white/10"></span>
