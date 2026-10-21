@@ -55,10 +55,10 @@ export default function Navbar() {
               <span className={`font-bold tracking-tight transition-all duration-300 ${
                 isScrolled ? "text-base lg:text-lg" : "text-lg lg:text-xl"
               } text-[#090B0D] dark:text-white`}>
-                RESCUE
+                Fix Battery
               </span>
               <span className="text-[10px] lg:text-[11px] font-medium text-gray-500 dark:text-gray-400 tracking-wider uppercase">
-                Car Battery Dubai
+                Car Repair Mobile Mechanic Dubai
               </span>
             </div>
           </Link>

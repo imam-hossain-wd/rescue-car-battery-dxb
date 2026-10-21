@@ -15,7 +15,7 @@ import { Button } from "@/components/ui/button";
 import { batteryImages } from "@/config/imageConfig";
 // import { batteryImages } from "@/data/batteryImages";
 
-export default function BatteryBrandsSection() {
+export default function BatteryBrands() {
   // Duplicate for seamless marquee effect
   const marqueeBrands = [...batteryImages, ...batteryImages];
 

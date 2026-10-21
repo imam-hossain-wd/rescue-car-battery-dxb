@@ -1,5 +1,4 @@
-
-
+import Link from "next/link";
 import {
   RiMapPin2Line,
   RiTimeLine,
@@ -9,172 +8,329 @@ import {
   RiWhatsappLine,
   RiCustomerService2Line,
   RiCheckboxCircleLine,
+  RiFlashlightFill,
+  RiCellphoneLine,
+  RiShieldCheckFill,
+  RiTimeFill,
+  RiCarWashingLine,
+  RiSettings3Line,
 } from "@remixicon/react";
+import { SiteConfig } from "@/config/siteConfig";
+import { cn } from "@/lib/utils";
+
+// const steps = [
+//   {
+//     id: 1,
+//     stepNumber: "01",
+//     icon: RiMapPin2Line,
+//     title: "Share Location & Car Details",
+//     description:
+//       "Send your location pin with car make, model & year. We dispatch the exact OEM battery chemistry (AGM, EFB, or SLI).",
+//     meta: "Instant Booking",
+//     metaIcon: RiFlashlightFill,
+//     tags: ["Location Pin", "Car Details", "OEM Match"],
+//   },
+//   {
+//     id: 2,
+//     stepNumber: "02",
+//     icon: RiTimeLine,
+//     title: "5–15 Minute Arrival",
+//     description:
+//       "Nearest certified electrician arrives with diagnostic tools, memory saver & fresh batteries ready to install.",
+//     meta: "5–15 Min Arrival",
+//     metaIcon: RiFlashlightFill,
+//     tags: ["Live Tracking", "Certified Tech", "No Towing"],
+//   },
+//   {
+//     id: 3,
+//     stepNumber: "03",
+//     icon: RiSettings4Line,
+//     title: "Diagnose, Swap & BMS Code",
+//     description:
+//       "Full load test on battery, starter & alternator. Swap with memory saver + free ECU/BMS computer registration.",
+//     meta: "90% Onsite Fix",
+//     metaIcon: RiShieldCheckFill,
+//     tags: ["Genuine Parts", "BMS Coding", "Warranty"],
+//   },
+//   {
+//     id: 4,
+//     stepNumber: "04",
+//     icon: RiBankCardLine,
+//     title: "Report & Easy Payment",
+//     description:
+//       "Digital health report + warranty certificate. Pay with Cash, Card, or Apple Pay after you're 100% satisfied.",
+//     meta: "Pay After Service",
+//     metaIcon: RiShieldCheckFill,
+//     tags: ["Digital Report", "Warranty Card", "Apple Pay"],
+//   },
+// ];
+
+const steps = [
+    {
+        id: 1,
+        stepNumber: "01",
+        icon: RiCellphoneLine,
+        title: "Call or Book Online",
+        description:
+            "Reach us 24/7 via phone, WhatsApp, or our website. Tell us your issue and location — we'll confirm your booking instantly.",
+        meta: "24/7 Available",
+        metaIcon: RiTimeFill,
+        tags: ["Phone", "WhatsApp", "Online Form"],
+    },
+    {
+        id: 2,
+        stepNumber: "02",
+        icon: RiCarWashingLine,
+        title: "We Come to You",
+        description:
+            "Our fully-equipped mobile unit dispatches immediately and arrives at your exact location within 5–15 minutes.",
+        meta: "5–15 Min Arrival",
+        metaIcon: RiFlashlightFill,
+        tags: ["GPS Tracking", "Live Updates", "No Towing"],
+    },
+    {
+        id: 3,
+        stepNumber: "03",
+        icon: RiSettings3Line,
+        title: "Fixed On-Site",
+        description:
+            "Certified mechanics diagnose and repair your vehicle right there. Pay upfront pricing — no hidden fees, no surprises.",
+        meta: "90% Onsite Fix Rate",
+        metaIcon: RiShieldCheckFill,
+        tags: ["Genuine Parts", "Warranty", "Transparent Pricing"],
+    },
+];
 
 export default function HowItWorksSection() {
-  const steps = [
-    {
-      number: "01",
-      icon: RiMapPin2Line,
-      title: "Share Location & Car Details",
-      description: "Send your location pin with car make, model & year. We dispatch the exact OEM battery chemistry.",
-     accent: "from-[#FFC400] to-yellow-300",
-      glow: "shadow-[#FFC400]/40",
-      textAccent: "text-[#FFC400]",
-      tag: "Step One",
-    },
-    {
-      number: "02",
-      icon: RiTimeLine,
-      title: "5–15 Minute Arrival",
-      description: "Nearest certified electrician arrives with diagnostic tools, memory saver & fresh batteries.",
-      accent: "from-[#FFC400] to-yellow-300",
-      glow: "shadow-[#FFC400]/40",
-      textAccent: "text-[#FFC400]",
-      tag: "Step Two",
-    },
-    {
-      number: "03",
-      icon: RiSettings4Line,
-      title: "Diagnose, Swap & BMS Code",
-      description: "Full load test on battery, starter & alternator. Swap with memory saver + free ECU/BMS coding.",
-      accent: "from-[#FFC400] to-yellow-300",
-      glow: "shadow-[#FFC400]/40",
-      textAccent: "text-[#FFC400]",
-      tag: "Step Three",
-    },
-    {
-      number: "04",
-      icon: RiBankCardLine,
-      title: "Report & Easy Payment",
-      description: "Digital health report + warranty certificate. Pay with Cash, Card, or Apple Pay.",
-     accent: "from-[#FFC400] to-yellow-300",
-      glow: "shadow-[#FFC400]/40",
-      textAccent: "text-[#FFC400]",
-      tag: "Step Four",
-    },
-  ];
-
   return (
-    <section className="w-full bg-[#090B0D] py-5 relative overflow-hidden">
-      {/* Layered background effects */}
-      <div className="absolute inset-0 bg-grid-white/[0.03]"></div>
-      
-      {/* Radial gradient spotlight */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#FFC400]/8 rounded-full blur-[120px]"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+    <section className="relative overflow-hidden bg-background py-16">
+      {/* ============================================================
+          BACKGROUND DECORATIVE LAYER
+      ============================================================ */}
+      <div className="pointer-events-none absolute inset-0">
+        {/* Large radial glow */}
+        <div className="absolute left-1/3 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/[0.05] blur-[130px]" />
+        <div className="absolute right-0 top-0 h-[400px] w-[400px] rounded-full bg-primary/[0.04] blur-[100px]" />
 
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
+        {/* Fine dot grid */}
+        <div
+          className="absolute inset-0 opacity-[0.4] dark:opacity-25"
+          style={{
+            backgroundImage: `radial-gradient(circle, currentColor 1px, transparent 1px)`,
+            backgroundSize: "28px 28px",
+            maskImage:
+              "radial-gradient(ellipse 80% 70% at 50% 50%, black 30%, transparent 85%)",
+            WebkitMaskImage:
+              "radial-gradient(ellipse 80% 70% at 50% 50%, black 30%, transparent 85%)",
+          }}
+        />
 
-      {/* Subtle top border glow */}
-      {/* <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#FFC400]/40 to-transparent"></div> */}
+        {/* Top hairline accent */}
+        <div className="absolute left-0 top-0 h-px w-1/3 bg-gradient-to-r from-primary/40 to-transparent" />
+        <div className="absolute right-0 top-0 h-px w-1/3 bg-gradient-to-l from-primary/40 to-transparent" />
+      </div>
 
-      {/* <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#FFC400]/20 to-transparent"></div> */}
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-        {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-7">
-          {/* <div className="inline-flex items-center gap-2 bg-[#FFC400]/10 border border-[#FFC400]/30 rounded-full px-3.5 py-1.5 mb-5 backdrop-blur-sm">
-            <span className="w-1.5 h-1.5 bg-[#FFC400] rounded-full animate-pulse shadow-lg shadow-[#FFC400]/50"></span>
-            <span className="text-[10px] font-bold text-[#FFC400] uppercase tracking-widest">Simple 4-Step Process</span>
-          </div> */}
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 leading-tight">
-            How Our <span className="text-[#FFC400] relative inline-block">
-              Doorstep Service
-              <span className="absolute -bottom-1 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#FFC400]/60 to-transparent"></span>
-            </span> Works
-          </h2>
-        </div>
-
-        {/* Steps Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 max-w-6xl mx-auto">
-
-          {steps.map((step, index) => (
-            <div key={index} className="relative group">
-              {/* Card */}
-              <div className="relative bg-linear-to-b from-white/[0.06] to-white/[0.02] backdrop-blur-sm rounded-2xl p-5 border border-white/10 hover:border-[#FFC400]/40 overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl h-full">
-
-                {/* Top gradient accent bar */}
-                <div className={`absolute top-0 left-0 right-0 h-[3px] bg-linear-to-r ${step.accent}`}></div>
-
-                {/* Corner glow on hover */}
-                <div className={`absolute -top-20 -right-20 w-40 h-40 bg-linear-to-br ${step.accent} opacity-0 group-hover:opacity-20 rounded-full blur-3xl transition-opacity duration-500`}></div>
-
-                {/* Inner border shine */}
-                <div className="absolute inset-0 rounded-2xl bg-linear-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-
-                {/* Number watermark */}
-                <span className="absolute top-2 right-3 text-6xl font-black text-white/[0.04] group-hover:text-[#FFC400]/10 transition-colors duration-500 select-none leading-none">
-                  {step.number}
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* ============================================================
+            SECTION LAYOUT — 2 COLUMNS ON DESKTOP
+        ============================================================ */}
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
+          {/* ==================================================
+              LEFT: STICKY HEADER (5 cols on desktop)
+          ================================================== */}
+          <div className="lg:col-span-5">
+            <div className="lg:sticky lg:top-24">
+              {/* Eyebrow */}
+              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/[0.06] px-4 py-1.5 backdrop-blur-sm">
+                <span className="relative flex size-1.5">
+                  <span className="absolute inline-flex size-full animate-ping rounded-full bg-primary/60" />
+                  <span className="relative inline-flex size-1.5 rounded-full bg-primary" />
                 </span>
-
-                <div className="relative z-10">
-                  {/* Icon with dual-layer */}
-                  <div className={`w-12 h-12 rounded-xl bg-linear-to-br ${step.accent} p-[1.5px] mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg ${step.glow}`}>
-                    <div className="w-full h-full rounded-[10px] bg-[#090B0D] flex items-center justify-center">
-                      <step.icon className={`w-5 h-5 ${step.textAccent}`} />
-                    </div>
-                  </div>
-
-                  {/* Tag */}
-                  <span className={`inline-block text-[9px] font-bold uppercase tracking-widest ${step.textAccent} mb-1.5`}>
-                    {step.tag}
+                <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-primary">
+                  How It Works
+                </span>
+              </div>
+              {/* Headline */}
+              <h2 className="text-3xl font-bold leading-[1.08] tracking-tight text-foreground sm:text-4xl lg:text-[3rem]">
+                Battery Rescue in{" "}
+                <span className="relative inline-block">
+                  <span className="relative z-10 text-primary">
+                    Four Simple Steps
                   </span>
+                  <span className="absolute inset-x-0 bottom-1.5 z-0 h-3 bg-primary/15" />
+                </span>
+              </h2>
 
-                  {/* Title */}
-                  <h3 className="text-sm font-bold text-white mb-2 leading-tight group-hover:text-[#FFC400] transition-colors duration-300">
-                    {step.title}
-                  </h3>
+              {/* Subtitle */}
+              <p className="mt-5 max-w-md text-sm leading-relaxed text-muted-foreground sm:text-base">
+                Your battery rescue journey made effortless  fast, transparent,
+                and without the garage hassle. Here's exactly what happens when
+                you call us.
+              </p>
 
-                  {/* Description */}
-                  <p className="text-xs text-gray-400 leading-relaxed">
-                    {step.description}
-                  </p>
-                </div>
-
-                {/* Bottom progress indicator */}
-                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-white/5 overflow-hidden">
-                  <div className={`h-full w-full bg-linear-to-r ${step.accent} transition-all duration-700`}></div>
-                </div>
+              {/* Quick stats */}
+              <div className="mt-8 grid grid-cols-3 gap-3">
+                {[
+                  { value: "5–15", unit: "min", label: "Response" },
+                  { value: "24/7", unit: "", label: "Available" },
+                  { value: "90%", unit: "", label: "Onsite Fix" },
+                ].map((stat, i) => (
+                  <div
+                    key={i}
+                    className="rounded-xl border border-border bg-card/50 p-3 text-center backdrop-blur-sm"
+                  >
+                    <p className="text-lg font-bold leading-none text-primary sm:text-xl">
+                      {stat.value}
+                      {stat.unit && (
+                        <span className="ml-0.5 text-[10px] font-semibold text-muted-foreground">
+                          {stat.unit}
+                        </span>
+                      )}
+                    </p>
+                    <p className="mt-1 text-[9px] font-bold uppercase tracking-wider text-muted-foreground">
+                      {stat.label}
+                    </p>
+                  </div>
+                ))}
               </div>
 
-              {/* Desktop connector arrow */}
-              {index < steps.length - 1 && (
-                <div className="hidden lg:flex absolute top-1/2 -right-3.5 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-[#090B0D] border border-white/10 items-center justify-center shadow-lg shadow-black/50 backdrop-blur-sm">
-                  <RiArrowRightLine className="w-3.5 h-3.5 text-[#FFC400]" />
-                </div>
-              )}
-
-              {/* Mobile connector */}
-              {index < steps.length - 1 && (
-                <div className="lg:hidden flex justify-center my-3">
-                  <div className="w-7 h-7 rounded-full bg-[#090B0D] border border-white/10 flex items-center justify-center rotate-90 shadow-lg">
-                    <RiArrowRightLine className="w-3.5 h-3.5 text-[#FFC400]" />
-                  </div>
-                </div>
-              )}
+              {/* CTA (desktop only) */}
+              <div className="mt-8 hidden flex-col gap-3 sm:flex-row lg:flex">
+                <Link
+                  href={SiteConfig.numberCallLink}
+                  className="group inline-flex h-12 items-center justify-center gap-2.5 rounded-xl bg-primary px-6 text-sm font-bold text-primary-foreground shadow-lg shadow-primary/25 transition-all duration-200 hover:bg-primary/90 hover:shadow-primary/40"
+                >
+                  <RiCustomerService2Line className="size-4" />
+                  Call Now
+                  <RiArrowRightLine className="size-4 transition-transform group-hover:translate-x-0.5" />
+                </Link>
+                <Link
+                  href={SiteConfig.whatsappCallLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex h-12 items-center justify-center gap-2 rounded-xl border-2 border-border bg-background px-6 text-sm font-bold text-foreground transition-all duration-200 hover:border-primary hover:text-primary"
+                >
+                  <RiWhatsappLine className="size-4" />
+                  WhatsApp
+                </Link>
+              </div>
             </div>
-          ))}
-        </div>
+          </div>
 
-        {/* CTA */}
-        <div className="text-center mt-5">
-      
-          <div className="flex flex-wrap items-center justify-center gap-4 mt-6 text-[10px] text-gray-500">
-            <span className="flex items-center gap-1.5">
-              <RiCheckboxCircleLine className="w-3.5 h-3.5 text-[#FFC400]" />
-              No hidden charges
-            </span>
-            <span className="w-px h-3 bg-white/10"></span>
-            <span className="flex items-center gap-1.5">
-              <RiCheckboxCircleLine className="w-3.5 h-3.5 text-[#FFC400]" />
-              Pay after service
-            </span>
-            <span className="w-px h-3 bg-white/10"></span>
-            <span className="flex items-center gap-1.5">
-              <RiCheckboxCircleLine className="w-3.5 h-3.5 text-[#FFC400]" />
-              Warranty included
-            </span>
+          {/* ==================================================
+              RIGHT: VERTICAL TIMELINE (7 cols on desktop)
+          ================================================== */}
+          <div className="lg:col-span-7">
+            <div className="relative">
+              {/* Vertical connector line */}
+              <div
+                aria-hidden="true"
+                className="absolute left-[27px] top-3 bottom-3 w-px md:left-[31px]"
+              >
+                <div className="h-full w-full bg-gradient-to-b from-primary/60 via-primary/30 to-transparent" />
+              </div>
+
+              {/* Steps */}
+              <div className="space-y-6">
+                {steps.map((step, idx) => {
+                  const Icon = step.icon;
+                  const MetaIcon = step.metaIcon;
+                  const isLast = idx === steps.length - 1;
+
+                  return (
+                    <div
+                      key={step.id}
+                      className="group relative flex gap-5 sm:gap-6"
+                    >
+                      {/* LEFT: Timeline Node */}
+                      <div className="relative shrink-0">
+                        <div className="relative flex size-14 items-center justify-center rounded-2xl border-4 border-background bg-primary shadow-lg shadow-primary/30 sm:size-16">
+                          <Icon className="size-6 text-primary-foreground sm:size-7" />
+
+                          {/* Step number badge */}
+                          <span className="absolute -right-1.5 -top-1.5 flex size-6 items-center justify-center rounded-full border-2 border-background bg-foreground text-[10px] font-black text-background">
+                            {step.stepNumber}
+                          </span>
+
+                          {/* Pulse for first step */}
+                          {idx === 0 && (
+                            <span className="absolute inset-0 -z-10 animate-ping rounded-2xl bg-primary/30" />
+                          )}
+                        </div>
+                      </div>
+
+                      {/* RIGHT: Step Card */}
+                      <article
+                        className={cn(
+                          "relative flex-1 overflow-hidden rounded-2xl border border-border bg-card p-5 transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/[0.08] sm:p-6",
+                          isLast && "pb-6 sm:pb-7"
+                        )}
+                      >
+                        {/* Subtle top gradient on hover */}
+                        <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-primary/[0.04] to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+
+                        <div className="relative">
+                          {/* Header row */}
+                          <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
+                            {/* Step label */}
+                            <span className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">
+                              <span className="size-1.5 rounded-full bg-primary" />
+                              Step {step.stepNumber}
+                            </span>
+
+                            {/* Meta badge */}
+                            <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-primary">
+                              <MetaIcon className="size-3" />
+                              {step.meta}
+                            </span>
+                          </div>
+
+                          {/* Title */}
+                          <h3 className="text-lg font-bold leading-tight tracking-tight text-foreground sm:text-xl">
+                            {step.title}
+                          </h3>
+
+                          {/* Description */}
+                          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                            {step.description}
+                          </p>
+
+                          {/* Tags */}
+                          <div className="mt-4 flex flex-wrap gap-1.5">
+                            {step.tags.map((tag) => (
+                              <span
+                                key={tag}
+                                className="inline-flex items-center rounded-md border border-border/70 bg-muted/40 px-2 py-0.5 text-[10px] font-semibold text-muted-foreground"
+                              >
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Bottom trust indicators */}
+              <div className="mt-8 flex flex-wrap items-center justify-center gap-4 text-[10px] text-muted-foreground">
+                <span className="flex items-center gap-1.5">
+                  <RiCheckboxCircleLine className="size-3.5 text-primary" />
+                  No hidden charges
+                </span>
+                <span className="h-3 w-px bg-border" />
+                <span className="flex items-center gap-1.5">
+                  <RiCheckboxCircleLine className="size-3.5 text-primary" />
+                  Pay after service
+                </span>
+                <span className="h-3 w-px bg-border" />
+                <span className="flex items-center gap-1.5">
+                  <RiCheckboxCircleLine className="size-3.5 text-primary" />
+                  Warranty included
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

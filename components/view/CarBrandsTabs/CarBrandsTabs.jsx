@@ -179,7 +179,7 @@ export default function CarBrandsTabs() {
 
               {/* Brand Grid */}
               <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-3 sm:gap-4">
-                {allCarBrands.map((brand, index) => (
+                {allCarBrands.slice(0,18).map((brand, index) => (
                   <div
                     key={`${active.id}-${index}`}
                     className="group/logo relative flex flex-col items-center justify-center aspect-square rounded-2xl border border-white/[0.07] bg-white/[0.06] hover:border-white/20 transition-all duration-300 hover:-translate-y-1 overflow-hidden"

@@ -1,6 +1,6 @@
 import Maps from '@/components/shared/Maps/Maps'
-import BatteryBrandsSection from '@/components/view/BatteryBrandShowcase/BatteryBrands'
 import BatteryCategories from '@/components/view/BatteryCategories/BatteryCategories'
+import BatteryBrands from '@/components/view/BatteryBrands/BatteryBrands'
 import BatteryFailingSigns from '@/components/view/BatteryFailingSigns/BatteryFailingSigns'
 import CarBrandsTabs from '@/components/view/CarBrandsTabs/CarBrandsTabs'
 import ComparisonSection from '@/components/view/ComparisonSection/ComparisonSection'
@@ -23,11 +23,11 @@ export default function HomePage() {
     <div>
     
       <Hero />
-      <InstantTrustStrip />
+      {/* <InstantTrustStrip /> */}
       {/* <HowRescueWorks /> */}
       <HowItWorksSection/>
       <FeaturedServices/>
-      <BatteryBrandsSection />
+      <BatteryBrands />
       <CarBrandsTabs />
       <WhoWeAre/>
       <WhyChooseUs />
