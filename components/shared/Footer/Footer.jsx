@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { 
-  RiFlashlightLine, 
-  RiWhatsappLine, 
+import {
+  RiFlashlightLine,
+  RiWhatsappLine,
   RiCustomerService2Line,
   RiMapPin2Line,
   RiMailLine,
@@ -14,11 +14,13 @@ import {
   RiArrowRightLine
 } from "@remixicon/react";
 import { Button } from "@/components/ui/button";
+import Logo from "../Logo/Logo";
+import { brandName } from "@/config/siteConfig";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
-  
+
 
   const serviceLinks = [
     { name: "Battery Replacement", href: "/services/battery-replacement" },
@@ -67,27 +69,21 @@ export default function Footer() {
       <div className="absolute inset-0 bg-grid-white/[0.02]"></div>
       <div className="absolute top-0 left-0 w-96 h-96 bg-[#FFC400]/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#FFC400]/5 rounded-full blur-3xl"></div>
-      
+
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer */}
         <div className="py-12 sm:py-16 lg:py-20">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
             {/* Column 1 - Brand */}
             <div className="col-span-1 sm:col-span-2 lg:col-span-1">
-              <Link href="/" className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-[#FFC400] rounded-lg flex items-center justify-center shadow-lg shadow-[#FFC400]/20">
-                  <RiFlashlightLine className="w-5 h-5 text-[#090B0D]" />
-                </div>
-                <div>
-                  <span className="font-bold text-white text-lg block leading-tight">RESCUE</span>
-                  <span className="text-[10px] font-medium text-gray-400 tracking-wider uppercase">Car Battery Dubai</span>
-                </div>
+              <Link href="/" className="flex items-center gap-3 group shrink-0 bg-white py-2 mb-5">
+                <Logo />
               </Link>
-              
+
               <p className="text-sm text-gray-400 leading-relaxed mb-4 max-w-sm">
                 24/7 mobile car battery replacement and emergency battery assistance across Dubai. Professional on-site testing, delivery and installation for standard, premium, AGM and EFB batteries.
               </p>
-              
+
               {/* Contact Info */}
               <div className="space-y-2.5 mb-4">
                 <a href="tel:+971501234567" className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-[#FFC400] transition-colors duration-200">
@@ -200,9 +196,9 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-white/5 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-gray-500 text-center sm:text-left">
-            © {currentYear} Rescue Car Battery Dubai. All Rights Reserved.
+            © {currentYear} {brandName}. All Rights Reserved.
           </p>
-          
+
           <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-gray-500">
             <Link href="/privacy" className="hover:text-[#FFC400] transition-colors duration-200">
               Privacy Policy

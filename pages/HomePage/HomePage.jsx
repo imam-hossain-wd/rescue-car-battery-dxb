@@ -12,7 +12,6 @@ import FeaturedServices from '@/components/view/FeaturedServices/FeaturedService
 import Hero from '@/components/view/Hero/Hero'
 import HowItWorksSection from '@/components/view/HowItWorksSection/HowItWorksSection'
 import HowRescueWorks from '@/components/view/HowRescueWorks/HowRescueWorks'
-import InstantTrustStrip from '@/components/view/InstantTrustStrip/InstantTrustStrip'
 import Reviews from '@/components/view/Reviews/Reviews'
 import WhoWeAre from '@/components/view/WhoWeAre/WhoWeAre'
 import WhyChooseUs from '@/components/view/WhyChooseUs/WhyChooseUs'

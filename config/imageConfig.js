@@ -72,7 +72,16 @@ import tesla from "../assets/cars-band/tesla.png";
 import toyota from "../assets/cars-band/toyota.png";
 import volvo from "../assets/cars-band/volvo.png";
 
+
+import logo from "../assets/logo/logo.png"
+
 // ---------- Car brand data (name + logo) ----------
+
+
+export const brandLogo = {
+  logo
+}
+
 
 export const japaneseBrands = [
   { name: "Honda", logo: honda },

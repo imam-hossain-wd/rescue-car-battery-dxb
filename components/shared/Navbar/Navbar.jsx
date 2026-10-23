@@ -12,6 +12,7 @@ import {
   RiFlashlightLine
 } from "@remixicon/react";
 import { Button } from "@/components/ui/button";
+import Logo from "../Logo/Logo";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,30 +38,20 @@ export default function Navbar() {
   ];
 
   return (
-    <header 
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        isScrolled 
-          ? "bg-white/95 dark:bg-[#090B0D]/95 backdrop-blur-md shadow-lg border-b border-gray-200/20 dark:border-white/10" 
-          : "bg-white dark:bg-[#090B0D] border-b border-gray-100 dark:border-white/5"
-      }`}
-    >
+    // <header 
+    //   className={`sticky top-0 z-50 w-full transition-all duration-300 bg-white ${
+    //     isScrolled 
+    //       ? "bg-white backdrop-blur-md shadow-lg border-b border-gray-200/20 dark:border-white/10" 
+    //       : "bg-white dark:bg-[#090B0D] border-b border-gray-100 dark:border-white/5"
+    //   }`}
+    // >
+          <header 
+      className= "sticky top-0 z-50 w-full transition-all duration-300 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group shrink-0">
-            <div className="relative flex items-center justify-center w-10 h-10 lg:w-12 lg:h-12 bg-[#FFC400] rounded-lg shadow-lg shadow-[#FFC400]/20 group-hover:shadow-[#FFC400]/30 transition-all duration-300">
-              <RiFlashlightLine className="w-5 h-5 lg:w-6 lg:h-6 text-[#090B0D]" />
-            </div>
-            <div className="flex flex-col leading-tight">
-              <span className={`font-bold tracking-tight transition-all duration-300 ${
-                isScrolled ? "text-base lg:text-lg" : "text-lg lg:text-xl"
-              } text-[#090B0D] dark:text-white`}>
-                Fix Battery
-              </span>
-              <span className="text-[10px] lg:text-[11px] font-medium text-gray-500 dark:text-gray-400 tracking-wider uppercase">
-                Car Repair Mobile Mechanic Dubai
-              </span>
-            </div>
+            <Logo />
           </Link>
 
           {/* Desktop Navigation */}
