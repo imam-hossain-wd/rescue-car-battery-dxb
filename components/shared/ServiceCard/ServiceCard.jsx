@@ -1,93 +1,13 @@
-// "use client";
-
-// import { RiArrowRightUpLine } from "@remixicon/react";
-// import Link from "next/link";
-
-
-
-// export default function ServiceCard({
-//   icon: Icon,
-//   title,
-//   description,
-//   popular,
-//   premium,
-//   index = 0,
-// }) {
-//   return (
-//     <Link
-//       href=""
-//       className="group relative block bg-[#0D1117] rounded-2xl border border-white/8 hover:border-[#FFC400]/40 overflow-hidden transition-all duration-500 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-[#FFC400]/10 h-full"
-//     >
-//       {/* Top accent line */}
-//       <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#FFC400]/50 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-
-//       {/* Ambient corner glow */}
-//       <div className="absolute -top-20 -right-20 w-40 h-40 bg-[#FFC400]/15 rounded-full blur-[60px] opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-
-//       {/* Diagonal shine sweep */}
-//       <div className="absolute inset-0 overflow-hidden rounded-2xl pointer-events-none">
-//         <div className="absolute top-0 -left-full w-1/2 h-full bg-linear-to-r from-transparent via-white/[0.06] to-transparent skew-x-[-20deg] group-hover:left-full transition-all duration-1000"></div>
-//       </div>
-
-//       {/* Popular/Premium Badge */}
-//       {(popular || premium) && (
-//         <div
-//           className={`absolute top-3.5 right-3.5 z-20 inline-flex items-center gap-1 text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full backdrop-blur-sm ${
-//             popular
-//               ? "bg-[#FFC400] text-[#090B0D] shadow-lg shadow-[#FFC400]/40"
-//               : "bg-linear-to-br from-purple-500 to-purple-600 text-white shadow-lg shadow-purple-500/40"
-//           }`}
-//         >
-//           {popular ? "🔥 Popular" : "⭐ Premium"}
-//         </div>
-//       )}
-
-//       <div className="relative z-10 p-5">
-//         {/* Icon box */}
-//         <div className="relative w-12 h-12 rounded-xl bg-linear-to-br from-[#FFC400]/20 to-[#FFC400]/[0.03] p-[1.5px] mb-4 shadow-lg shadow-[#FFC400]/5 group-hover:shadow-[#FFC400]/20 transition-shadow duration-500">
-//           <div className="relative w-full h-full rounded-[10px] bg-[#090B0D] flex items-center justify-center overflow-hidden">
-//             {/* Icon glow on hover */}
-//             <div className="absolute inset-0 bg-[#FFC400]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-//             <Icon className="w-5 h-5 text-[#FFC400] relative z-10 group-hover:scale-110 group-hover:rotate-[-6deg] transition-transform duration-500" />
-//           </div>
-//         </div>
-
-//         {/* Title */}
-//         <h3 className="text-sm font-bold text-white mb-2 leading-snug line-clamp-2 group-hover:text-[#FFC400] transition-colors duration-300">
-//           {title}
-//         </h3>
-
-//         {/* Description */}
-//         <p className="text-xs text-gray-400 leading-relaxed line-clamp-3 mb-4">
-//           {description}
-//         </p>
-
-//         {/* Footer */}
-//         <div className="flex items-center justify-between pt-3 border-t border-white/5">
-//           <span className="text-[10px] font-semibold uppercase tracking-wider text-[#FFC400] transition-colors duration-300">
-//             Learn more
-//           </span>
-//           <span className="relative w-7 h-7 rounded-full border border-white/10 flex items-center justify-center overflow-hidden bg-[#FFC400] group-hover:border-[#FFC400] group-hover:shadow-lg group-hover:shadow-[#FFC400]/40 transition-all duration-300">
-//             <RiArrowRightUpLine className="w-3.5 h-3.5  group-hover:text-[#090B0D] transition-colors duration-300" />
-//           </span>
-//         </div>
-//       </div>
-
-//       {/* Bottom glow line */}
-//       <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#FFC400]/30 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center"></div>
-//     </Link>
-//   );
-// }
-
 // components/shared/ServiceCard/ServiceCard.tsx
 "use client";
 
 import Link from "next/link";
 import {
   RiArrowRightUpLine,
+  RiArrowRightLine,
   RiFlashlightLine,
-  RiCheckboxCircleLine,
   RiStarFill,
+  RiCheckboxCircleLine,
 } from "@remixicon/react";
 import { cn } from "@/lib/utils";
 
@@ -116,46 +36,72 @@ export default function ServiceCard({ service, index = 0 }) {
   return (
     <Link
       href={href}
-      aria-label={title}
+      aria-label={`${title} — view full service details`}
       style={{ animationDelay: `${index * 60}ms` }}
       className={cn(
+        // Base structure
         "group relative flex h-full flex-col overflow-hidden rounded-2xl",
-        "border border-white/[0.08] bg-[#0D1117]",
-        "transition-all duration-500 hover:-translate-y-1.5",
-        "hover:border-[#FFC400]/40 hover:shadow-2xl hover:shadow-[#FFC400]/10",
-        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FFC400]/60"
+        // Layered surface
+        "bg-linear-to-b from-[#0F1419] via-[#0D1117] to-[#0A0E12]",
+        "border border-white/[0.06]",
+        // Hover state
+        "hover:border-[#FFC400]/50",
+        "hover:-translate-y-2",
+        "hover:shadow-[0_20px_60px_-15px_rgba(255,196,0,0.25)]",
+        // Focus (a11y)
+        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FFC400]/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#090B0D]",
+        // Motion
+        "transition-all duration-500 ease-out will-change-transform"
       )}
     >
       {/* =========================================================
-          TOP ACCENT LINE
+          LAYER 1 — TOP ACCENT LINE
       ========================================================= */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#FFC400]/50 to-transparent scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
-
-      {/* =========================================================
-          AMBIENT CORNER GLOW
-      ========================================================= */}
-      <div className="pointer-events-none absolute -top-20 -right-20 h-40 w-40 rounded-full bg-[#FFC400]/15 blur-[60px] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-
-      {/* =========================================================
-          DIAGONAL SHINE SWEEP
-      ========================================================= */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden rounded-2xl">
-        <div className="absolute top-0 -left-full h-full w-1/2 skew-x-[-20deg] bg-linear-to-r from-transparent via-white/[0.06] to-transparent group-hover:left-full transition-all duration-1000" />
+      <div className="absolute top-0 left-0 right-0 h-[2px] overflow-hidden rounded-t-2xl">
+        <div className="h-full w-full origin-left scale-x-0 bg-linear-to-r from-transparent via-[#FFC400] to-transparent opacity-0 group-hover:scale-x-100 group-hover:opacity-100 transition-all duration-700" />
       </div>
 
       {/* =========================================================
-          BADGES (Popular / Premium)
+          LAYER 2 — CORNER AMBIENT GLOW
+      ========================================================= */}
+      <div className="pointer-events-none absolute -top-24 -right-24 h-48 w-48 rounded-full bg-[#FFC400]/20 opacity-0 blur-[70px] group-hover:opacity-100 transition-opacity duration-700" />
+
+      {/* =========================================================
+          LAYER 3 — DIAGONAL SHINE SWEEP
+      ========================================================= */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden rounded-2xl">
+        <div className="absolute top-0 -left-full h-full w-2/3 skew-x-[-20deg] bg-linear-to-r from-transparent via-white/[0.07] to-transparent group-hover:left-full transition-all duration-[1200ms] ease-out" />
+      </div>
+
+      {/* =========================================================
+          LAYER 4 — GRID PATTERN OVERLAY (subtle)
+      ========================================================= */}
+      <div
+        className="pointer-events-none absolute inset-0 rounded-2xl opacity-[0.03] group-hover:opacity-[0.06] transition-opacity duration-500"
+        style={{
+          backgroundImage: `linear-gradient(to right, currentColor 1px, transparent 1px), linear-gradient(to bottom, currentColor 1px, transparent 1px)`,
+          backgroundSize: "20px 20px",
+          maskImage:
+            "radial-gradient(ellipse 60% 60% at 50% 0%, black 20%, transparent 70%)",
+          WebkitMaskImage:
+            "radial-gradient(ellipse 60% 60% at 50% 0%, black 20%, transparent 70%)",
+        }}
+      />
+
+      {/* =========================================================
+          BADGES — POPULAR / PREMIUM
       ========================================================= */}
       {(popular || premium) && (
         <div
           className={cn(
-            "absolute top-3 right-3 z-20 inline-flex items-center gap-1 rounded-full px-2 py-0.5",
-            "text-[9px] font-bold uppercase tracking-wider backdrop-blur-sm",
+            "absolute top-3 right-3 z-20 inline-flex items-center gap-1 rounded-full px-2.5 py-1",
+            "text-[9px] font-extrabold uppercase tracking-widest",
+            "shadow-lg backdrop-blur-sm",
             popular &&
-              "bg-[#FFC400] text-[#090B0D] shadow-lg shadow-[#FFC400]/40",
+              "bg-[#FFC400] text-[#090B0D] shadow-[#FFC400]/40 animate-[pulse_3s_ease-in-out_infinite]",
             premium &&
               !popular &&
-              "bg-linear-to-br from-purple-500 to-purple-600 text-white shadow-lg shadow-purple-500/40"
+              "bg-linear-to-br from-purple-500 via-purple-600 to-fuchsia-600 text-white shadow-purple-500/50"
           )}
         >
           {popular ? (
@@ -176,44 +122,60 @@ export default function ServiceCard({ service, index = 0 }) {
           MAIN CONTENT
       ========================================================= */}
       <div className="relative z-10 flex flex-1 flex-col p-5">
-        {/* Icon */}
-        <div className="relative mb-4 h-12 w-12 rounded-xl bg-linear-to-br from-[#FFC400]/20 to-[#FFC400]/[0.03] p-[1.5px] shadow-lg shadow-[#FFC400]/5 group-hover:shadow-[#FFC400]/20 transition-shadow duration-500">
-          <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-[10px] bg-[#090B0D]">
-            {/* Icon glow */}
-            <div className="absolute inset-0 bg-[#FFC400]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <Icon className="relative z-10 h-5 w-5 text-[#FFC400] group-hover:scale-110 group-hover:-rotate-6 transition-transform duration-500" />
+        {/* -----------------------------------------
+            ICON — Dual-layer with glow ring
+        ----------------------------------------- */}
+        <div className="relative mb-4 inline-flex">
+          {/* Outer glow ring on hover */}
+          <div className="absolute inset-0 rounded-xl bg-[#FFC400]/30 opacity-0 blur-md group-hover:opacity-100 transition-opacity duration-500" />
+
+          {/* Icon frame */}
+          <div className="relative h-12 w-12 rounded-xl bg-linear-to-br from-[#FFC400]/25 via-[#FFC400]/10 to-transparent p-[1.5px] group-hover:rotate-3 transition-transform duration-500">
+            <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-[10px] bg-[#0A0E12]">
+              {/* Inner radial glow */}
+              <div className="absolute inset-0 bg-radial-gradient from-[#FFC400]/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <Icon className="relative z-10 h-5 w-5 text-[#FFC400] group-hover:scale-110 transition-transform duration-500" />
+            </div>
           </div>
         </div>
 
-        {/* Title */}
-        <h3 className="mb-2 line-clamp-2 text-sm font-bold leading-snug text-white group-hover:text-[#FFC400] transition-colors duration-300">
+        {/* -----------------------------------------
+            TITLE
+        ----------------------------------------- */}
+        <h3 className="mb-2 line-clamp-2 text-sm font-bold leading-snug tracking-tight text-white group-hover:text-[#FFC400] transition-colors duration-300">
           {title}
         </h3>
 
-        {/* Description */}
-        <p className="mb-4 line-clamp-3 text-xs leading-relaxed text-gray-400">
+        {/* -----------------------------------------
+            DESCRIPTION
+        ----------------------------------------- */}
+        <p className="mb-4 line-clamp-3 text-xs leading-relaxed text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
           {shortDescription}
         </p>
 
-        {/* Footer */}
-        <div className="mt-auto flex items-center justify-between border-t border-white/[0.06] pt-3">
+        {/* -----------------------------------------
+            FOOTER
+        ----------------------------------------- */}
+        <div className="mt-auto flex items-center justify-between border-t border-white/[0.06] pt-3.5">
           {/* Category pill */}
-          <span className="inline-flex items-center gap-1 rounded-md bg-white/[0.04] px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-gray-400">
-            <RiCheckboxCircleLine className="h-2.5 w-2.5 text-[#FFC400]" />
+          <span className="inline-flex items-center gap-1 rounded-md bg-white/[0.03] px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-gray-500 group-hover:bg-[#FFC400]/10 group-hover:text-[#FFC400]/80 transition-all duration-300">
+            <RiCheckboxCircleLine className="h-2.5 w-2.5" />
             {category}
           </span>
 
-          {/* Arrow */}
-          <span className="relative flex h-7 w-7 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white/5 group-hover:bg-[#FFC400] group-hover:border-[#FFC400] group-hover:shadow-lg group-hover:shadow-[#FFC400]/40 transition-all duration-300">
-            <RiArrowRightUpLine className="h-3.5 w-3.5 text-gray-400 group-hover:text-[#090B0D] transition-colors duration-300" />
+          {/* CTA arrow */}
+          <span className="relative flex h-7 w-7 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white/5 group-hover:border-[#FFC400] group-hover:bg-[#FFC400] group-hover:shadow-lg group-hover:shadow-[#FFC400]/50 transition-all duration-300">
+            <RiArrowRightUpLine className="h-3.5 w-3.5 text-gray-400 group-hover:text-[#090B0D] group-hover:scale-110 transition-all duration-300" />
           </span>
         </div>
       </div>
 
       {/* =========================================================
-          BOTTOM GLOW LINE
+          LAYER 5 — BOTTOM GLOW LINE
       ========================================================= */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#FFC400]/30 to-transparent scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500" />
+      <div className="absolute bottom-0 left-0 right-0 h-px overflow-hidden rounded-b-2xl">
+        <div className="h-full w-full origin-center scale-x-0 bg-linear-to-r from-transparent via-[#FFC400]/60 to-transparent group-hover:scale-x-100 transition-transform duration-500" />
+      </div>
     </Link>
   );
 }
