@@ -1,4 +1,5 @@
 export const serviceAreas = [
+    { name: "Al Barsha", slug: "/al-barsha" },
     { name: "Business Bay", slug: "/business-bay" },
     { name: "Downtown Dubai", slug: "/downtown-dubai" },
     { name: "DIFC", slug: "/difc" },

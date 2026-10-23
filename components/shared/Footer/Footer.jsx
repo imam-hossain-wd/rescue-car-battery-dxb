@@ -16,6 +16,8 @@ import {
 import { Button } from "@/components/ui/button";
 import Logo from "../Logo/Logo";
 import { brandName } from "@/config/siteConfig";
+import { serviceAreas } from "@/data/serviceAreas";
+import { services } from "@/data/service";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -48,9 +50,8 @@ export default function Footer() {
   const companyLinks = [
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
-    { name: "FAQ", href: "/faq" },
-    { name: "Reviews", href: "/reviews" },
-    { name: "Blog", href: "/blog" },
+    { name: "Privacy & Policy", href: "/privacy" },
+    { name: "Terms & Condition", href: "/terms" },
   ];
 
   const socialLinks = [
@@ -122,14 +123,14 @@ export default function Footer() {
                 Battery Services
               </h3>
               <ul className="space-y-2.5">
-                {serviceLinks.map((link, index) => (
+                {services.map((link, index) => (
                   <li key={index}>
                     <Link
-                      href={link.href}
+                      href={link.slug}
                       className="text-sm text-gray-400 hover:text-[#FFC400] transition-colors duration-200 flex items-center gap-2 group"
                     >
-                      <RiArrowRightLine className="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" />
-                      {link.name}
+                      <RiArrowRightLine className="w-3 h-3 pservopacity-100 group-hover:translate-x-1 transition-all duration-200" />
+                      {link.title}
                     </Link>
                   </li>
                 ))}
@@ -142,16 +143,15 @@ export default function Footer() {
                 Popular Areas
               </h3>
               <ul className="space-y-2.5">
-                {areaLinks.map((link, index) => (
-                  <li key={index}>
-                    <Link
-                      href={link.href}
+                {serviceAreas.map((link, index) => (
+                  <div key={index}>
+                    <p
                       className="text-sm text-gray-400 hover:text-[#FFC400] transition-colors duration-200 flex items-center gap-2 group"
                     >
-                      <RiArrowRightLine className="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" />
+                      <RiArrowRightLine className="w-3 h-3 opacity-100 group-hover:translate-x-1 transition-all duration-200" />
                       {link.name}
-                    </Link>
-                  </li>
+                    </p>
+                  </div>
                 ))}
               </ul>
             </div>

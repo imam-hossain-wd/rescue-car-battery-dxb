@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /private/
+Disallow: /_next/
+
+Sitemap: https://www.dubaicarbatteryreplacement.com/sitemap.xml
