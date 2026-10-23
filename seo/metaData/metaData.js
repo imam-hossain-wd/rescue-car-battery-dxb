@@ -1,7 +1,6 @@
 import { SiteConfig } from "@/config/siteConfig";
 
 export const siteMetadata = {
-  // 1. Home Page (/) - Core Emergency Battery Conversion Hub
   home: {
     title: "24/7 Mobile Car Battery Replacement Dubai | 5-15 Min Response",
     description: `Fast 24/7 mobile car battery replacement in Dubai arriving in 5–15 mins. On-site installation, BMS ECU coding & alternator testing. Call ${SiteConfig.displayNumber}.`,
@@ -13,7 +12,6 @@ export const siteMetadata = {
     },
   },
 
-  // 2. Battery Services (/services) - Service Taxonomy & Diagnostics
   services: {
     title: "Mobile Car Battery Services Dubai | On-Site Replacement & Diagnostics",
     description: "Explore 24/7 mobile car battery services in Dubai: AGM, EFB & Gel battery replacement, computer BMS coding, jumpstarts & battery health testing.",
@@ -22,7 +20,6 @@ export const siteMetadata = {
     },
   },
 
-  // 3. Battery Brands (/battery-brands) - High-Intent Product Keywords
   batteryBrands: {
     title: "Car Battery Brands in Dubai | Varta, Amaron, Solite, Bosch & ACDelco",
     description: "100% genuine car batteries in Dubai with up to 48 months warranty. Genuine stock for Varta, Amaron, Solite, Optima, Delkor, Bosch, and 15+ top brands.",
@@ -31,7 +28,6 @@ export const siteMetadata = {
     },
   },
 
-  // 4. Car Brands (/car-brands) - Vehicle Compatibility & Specialized Coding
   carBrands: {
     title: "Car Battery Replacement by Car Make | Luxury, European & Asian Specialists",
     description: "Specialized mobile battery replacement & BMS ECU registration for Toyota, Nissan, BMW, Mercedes-Benz, Audi, Porsche, Range Rover, and American SUVs.",
@@ -40,7 +36,6 @@ export const siteMetadata = {
     },
   },
 
-  // 5. Dubai Areas (/service-area) - Hyper-Local GEO Footprint
   serviceArea: {
     title: "Mobile Car Battery Replacement Areas Dubai | 21+ Districts Covered",
     description: "24/7 mobile battery replacement covering 21+ Dubai areas: Marina, Business Bay, Downtown, Deira, Jumeirah, Silicon Oasis & Sheikh Zayed Rd.",
@@ -49,7 +44,6 @@ export const siteMetadata = {
     },
   },
 
-  // 6. About Us (/about) - Authority & Trust Building
   about: {
     title: `About ${SiteConfig.brandName} | Trusted Battery Specialists Dubai`,
     description: `Operating since ${SiteConfig.foundedYear}, ${SiteConfig.brandName} delivers 24/7 mobile battery replacement across Dubai with certified mechanics & 100% genuine parts.`,
@@ -58,7 +52,6 @@ export const siteMetadata = {
     },
   },
 
-  // 7. Contact Us (/contact) - Emergency Conversion Channel
   contact: {
     title: `Contact 24/7 Mobile Battery Rescue Dubai | Call ${SiteConfig.displayNumber}`,
     description: `Need an emergency battery change or jumpstart in Dubai? Contact our 24/7 dispatch team via phone or WhatsApp. Rapid 5-15 min arrival guaranteed!`,
@@ -67,7 +60,6 @@ export const siteMetadata = {
     },
   },
 
-  // 8. Privacy Policy (/privacy)
   privacy: {
     title: `Privacy Policy | ${SiteConfig.brandName}`,
     description: `Official privacy policy for ${SiteConfig.brandName}. Learn how we protect customer data, GPS dispatch location tracking, and secure service processing.`,
@@ -76,7 +68,6 @@ export const siteMetadata = {
     },
   },
 
-  // 9. Terms of Service (/terms)
   terms: {
     title: `Terms of Service & Warranty Policy | ${SiteConfig.brandName}`,
     description: `Official service terms, 12-48 month battery warranty policies, upfront pricing guarantees, and emergency mobile dispatch rules for ${SiteConfig.brandName}.`,

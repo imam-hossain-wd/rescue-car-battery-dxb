@@ -51,9 +51,6 @@ export default function Footer() {
     { name: "FAQ", href: "/faq" },
     { name: "Reviews", href: "/reviews" },
     { name: "Blog", href: "/blog" },
-    { name: "Privacy Policy", href: "/privacy" },
-    { name: "Terms", href: "/terms" },
-    { name: "Warranty Policy", href: "/warranty" },
   ];
 
   const socialLinks = [
@@ -86,18 +83,18 @@ export default function Footer() {
 
               {/* Contact Info */}
               <div className="space-y-2.5 mb-4">
-                <a href="tel:+971501234567" className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-[#FFC400] transition-colors duration-200">
+                <Link href="tel:+971501234567" className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-[#FFC400] transition-colors duration-200">
                   <RiCustomerService2Line className="w-4 h-4 text-[#FFC400]" />
                   <span>+971 50 123 4567</span>
-                </a>
-                <a href="https://wa.me/971501234567" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-[#25D366] transition-colors duration-200">
+                </Link>
+                <Link href="https://wa.me/971501234567" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-[#25D366] transition-colors duration-200">
                   <RiWhatsappLine className="w-4 h-4 text-[#25D366]" />
                   <span>WhatsApp Us</span>
-                </a>
-                <a href="mailto:info@rescuecarbatterydubai.com" className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-[#FFC400] transition-colors duration-200">
+                </Link>
+                <Link href="mailto:info@rescuecarbatterydubai.com" className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-[#FFC400] transition-colors duration-200">
                   <RiMailLine className="w-4 h-4 text-[#FFC400]" />
                   <span>info@rescuecarbatterydubai.com</span>
-                </a>
+                </Link>
                 <div className="flex items-center gap-2.5 text-sm text-gray-400">
                   <RiMapPin2Line className="w-4 h-4 text-[#FFC400]" />
                   <span>Dubai, United Arab Emirates</span>
@@ -107,14 +104,14 @@ export default function Footer() {
               {/* Social Links */}
               <div className="flex items-center gap-3">
                 {socialLinks.map((social, index) => (
-                  <a
+                  <Link
                     key={index}
                     href={social.href}
                     aria-label={social.label}
                     className="w-9 h-9 rounded-full bg-white/5 hover:bg-[#FFC400]/20 border border-white/10 hover:border-[#FFC400]/30 flex items-center justify-center transition-all duration-200 hover:scale-110"
                   >
                     <social.icon className="w-4 h-4 text-gray-400 hover:text-[#FFC400] transition-colors duration-200" />
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -200,19 +197,6 @@ export default function Footer() {
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-gray-500">
-            <Link href="/privacy" className="hover:text-[#FFC400] transition-colors duration-200">
-              Privacy Policy
-            </Link>
-            <span className="w-px h-3 bg-white/10"></span>
-            <Link href="/terms" className="hover:text-[#FFC400] transition-colors duration-200">
-              Terms of Service
-            </Link>
-            <span className="w-px h-3 bg-white/10"></span>
-            <Link href="/warranty" className="hover:text-[#FFC400] transition-colors duration-200">
-              Warranty Policy
-            </Link>
-            <span className="w-px h-3 bg-white/10"></span>
-            <span className="text-gray-600">Made with ❤️ in Dubai</span>
           </div>
         </div>
       </div>
