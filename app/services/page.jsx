@@ -1,4 +1,5 @@
-import ServicesPage from '@/pages/ServicePage/ServicePage'
+
+import ServicesPage from '@/components/pages/ServicePage/ServicePage';
 import { siteMetadata } from '@/seo/metaData/metaData'
 import React from 'react'
 

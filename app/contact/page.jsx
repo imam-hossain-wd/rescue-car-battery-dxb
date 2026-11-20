@@ -1,4 +1,4 @@
-import ContactPage from '@/pages/ContactPage/ContactPage'
+import ContactPage from '@/components/pages/ContactPage/ContactPage'
 import { siteMetadata } from '@/seo/metaData/metaData'
 import React from 'react'
 

@@ -1,4 +1,4 @@
-import CarBrandsPage from '@/pages/CarBrandsPage/CarBrandsPage'
+import CarBrandsPage from '@/components/pages/CarBrandsPage/CarBrandsPage'
 import { siteMetadata } from '@/seo/metaData/metaData'
 import React from 'react'
 

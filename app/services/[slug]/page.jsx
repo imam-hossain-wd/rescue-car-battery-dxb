@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation";
 import { SiteConfig } from "@/config/siteConfig";
-import ServiceDetailPage from "@/pages/ServicePage/ServiceDetailPage";
+import ServiceDetailPage from "@/components/pages/ServicePage/ServiceDetailPage";
 import { services } from "@/data/service";
+
 
 
 /* ============ Dynamic Metadata ============ */

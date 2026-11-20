@@ -1,5 +1,6 @@
 import { SiteConfig } from "@/config/siteConfig";
 import { services } from "@/data/service";
+// import { services } from "@/data/service";
 
 
 export default async function sitemap(){
@@ -25,25 +26,18 @@ export default async function sitemap(){
     priority: route.priority,
   }));
 
-  // 2. Dynamic Service Pages (Generated from your 20 expanded services)
+
   const servicePages = (services || []).map((service) => ({
-    url: `${baseUrl}/services/${services.slug}`,
+    url: `${baseUrl}/services/${service.slug}`,
     lastModified: now,
     changeFrequency: "weekly",
-    priority: service.popular || service.premium ? 0.9 : 0.8, // High priority for key conversion services
+    priority: service.popular || service.premium ? 0.9 : 0.8,
   }));
 
-  // Optional: If you intend to add dynamic area pages in the future, you can map them here like this:
-  // const areaPages: MetadataRoute.Sitemap = (SiteConfig.serviceAreas || []).map((area) => ({
-  //   url: `${baseUrl}/service-area/${area.name.toLowerCase().replace(/\s+/g, '-')}`,
-  //   lastModified: now,
-  //   changeFrequency: "monthly",
-  //   priority: 0.75,
-  // }));
+  console.log(services, 'services')
 
   return [
     ...staticPages,
     ...servicePages,
-    // ...areaPages, // Uncomment if you build individual area landing pages
   ];
 }

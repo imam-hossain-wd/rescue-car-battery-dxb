@@ -15,12 +15,39 @@ import {
 } from "@remixicon/react";
 import { Button } from "@/components/ui/button";
 import Logo from "../Logo/Logo";
-import { brandName } from "@/config/siteConfig";
+import { brandName, SiteConfig } from "@/config/siteConfig";
 import { serviceAreas } from "@/data/serviceAreas";
 import { services } from "@/data/service";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+
+  const {
+      contactLinks,
+  socialLinks,
+  footerhrefs,
+  navItems,
+  serviceAreas,
+  location,
+  emailLink,
+  streetAddress,
+  addressLocality,
+  addressRegion,
+  addressCountry,
+  postalCode,
+  numberCallLink,
+  whatsappCallLink,
+  operatingHours,
+  displayNumber,
+  description,
+  email,
+  url,
+  brandName,
+  authorName,
+  city,
+  country,
+  GMB,
+  } = SiteConfig;
 
 
 
@@ -54,12 +81,12 @@ export default function Footer() {
     { name: "Terms & Condition", href: "/terms" },
   ];
 
-  const socialLinks = [
-    { icon: RiInstagramLine, href: "#", label: "Instagram" },
-    { icon: RiFacebookLine, href: "#", label: "Facebook" },
-    { icon: RiTwitterXLine, href: "#", label: "Twitter" },
-    { icon: RiYoutubeLine, href: "#", label: "YouTube" },
-  ];
+  // const socialLinks = [
+  //   { icon: RiInstagramLine, href: "#", label: "Instagram" },
+  //   { icon: RiFacebookLine, href: "#", label: "Facebook" },
+  //   { icon: RiTwitterXLine, href: "#", label: "Twitter" },
+  //   { icon: RiYoutubeLine, href: "#", label: "YouTube" },
+  // ];
 
   return (
     <footer className="w-full bg-[#090B0D] border-t border-white/5 relative overflow-hidden">
@@ -84,21 +111,21 @@ export default function Footer() {
 
               {/* Contact Info */}
               <div className="space-y-2.5 mb-4">
-                <Link href="tel:+971501234567" className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-[#FFC400] transition-colors duration-200">
+                <Link href={numberCallLink} className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-[#FFC400] transition-colors duration-200">
                   <RiCustomerService2Line className="w-4 h-4 text-[#FFC400]" />
-                  <span>+971 50 123 4567</span>
+                  <span>{displayNumber}</span>
                 </Link>
-                <Link href="https://wa.me/971501234567" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-[#25D366] transition-colors duration-200">
+                <Link href={whatsappCallLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-[#25D366] transition-colors duration-200">
                   <RiWhatsappLine className="w-4 h-4 text-[#25D366]" />
                   <span>WhatsApp Us</span>
                 </Link>
                 <Link href="mailto:info@rescuecarbatterydubai.com" className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-[#FFC400] transition-colors duration-200">
                   <RiMailLine className="w-4 h-4 text-[#FFC400]" />
-                  <span>info@rescuecarbatterydubai.com</span>
+                  <span>{email}</span>
                 </Link>
                 <div className="flex items-center gap-2.5 text-sm text-gray-400">
                   <RiMapPin2Line className="w-4 h-4 text-[#FFC400]" />
-                  <span>Dubai, United Arab Emirates</span>
+                  <span>{streetAddress}, {location}, {city}, {addressCountry}</span>
                 </div>
               </div>
 
@@ -203,3 +230,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+

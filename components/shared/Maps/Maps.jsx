@@ -18,11 +18,11 @@ import {
 } from "@remixicon/react";
 import { cn } from "@/lib/utils";
 import { SiteConfig } from "@/config/siteConfig";
+import { serviceAreas } from "@/data/serviceAreas";
 
 export default function Maps() {
   const {
     GMB,
-    serviceAreas,
     brandName,
     city,
     country,
@@ -78,16 +78,16 @@ export default function Maps() {
                 Located in{" "}
                 <span className="relative inline-block">
                   <span className="relative z-10 text-primary">
-                    {city}, {country}
+                   {city}
                   </span>
                   <span className="absolute inset-x-0 bottom-2 z-0 h-4 bg-primary/15" />
                 </span>
               </h2>
               <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
                 Our mobile fleet is strategically positioned across every major
-                Dubai district — ready to reach you within{" "}
+                Dubai district ready to reach you within{" "}
                 <span className="font-bold text-foreground">
-                  5–15 minutes
+                  5 to 15 minutes
                 </span>
                 , 24/7.
               </p>
@@ -183,7 +183,7 @@ export default function Maps() {
                 <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-muted-foreground">
                   <span className="inline-flex items-center gap-2 font-semibold">
                     <RiMapPinFill className="size-4 text-primary" />
-                    {location || `${streetAddress}, ${addressLocality}`}
+                    {streetAddress}, {location}, {city}, {addressCountry}
                   </span>
                   <span className="hidden size-1 rounded-full bg-border sm:inline-block" />
                   <span className="inline-flex items-center gap-2 font-semibold">
@@ -237,8 +237,7 @@ export default function Maps() {
                         Address
                       </p>
                       <p className="text-sm leading-relaxed text-foreground">
-                        {streetAddress}, {addressLocality}, {addressRegion},{" "}
-                        {addressCountry}
+                      {streetAddress}, {location}, {city}, {addressCountry}
                       </p>
                       {mapsLink && (
                         <Link

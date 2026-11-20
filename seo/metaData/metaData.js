@@ -5,7 +5,7 @@ export const siteMetadata = {
     title: "24/7 Mobile Car Battery Replacement Dubai | 5-15 Min Response",
     description: `Fast 24/7 mobile car battery replacement in Dubai arriving in 5–15 mins. On-site installation, BMS ECU coding & alternator testing. Call ${SiteConfig.displayNumber}.`,
       verification: {
-      google: "",
+      google: "qGROSphZVO9CWM3II8i3DCTpt-z3m8PebqbcUjjVj60",
     },
     alternates: {
       canonical: SiteConfig.url,

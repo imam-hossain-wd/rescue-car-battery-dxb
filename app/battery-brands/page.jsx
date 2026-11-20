@@ -1,4 +1,4 @@
-import BatteryBrandsPage from '@/pages/BatteryBrandsPage/BatteryBrandsPage'
+import BatteryBrandsPage from '@/components/pages/BatteryBrandsPage/BatteryBrandsPage'
 import { siteMetadata } from '@/seo/metaData/metaData'
 import React from 'react'
 

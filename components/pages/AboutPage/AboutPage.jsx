@@ -24,6 +24,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
 import { SiteConfig } from "@/config/siteConfig";
+import { serviceAreas } from "@/data/serviceAreas";
 
 
 const { brandName,
@@ -34,7 +35,7 @@ const { brandName,
   location,
   email,
   foundedYear,
-  serviceAreas,
+  
   socialLinks,
   city,
   country} = SiteConfig

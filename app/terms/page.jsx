@@ -1,4 +1,4 @@
-import TermsPage from '@/pages/TermsPage/TermsPage'
+import TermsPage from '@/components/pages/TermsPage/TermsPage'
 import React from 'react'
 
 export default function page() {

@@ -1,4 +1,4 @@
-import AboutPage from '@/pages/AboutPage/AboutPage'
+import AboutPage from '@/components/pages/AboutPage/AboutPage'
 import { siteMetadata } from '@/seo/metaData/metaData'
 
 

@@ -1,20 +1,161 @@
-import { RiFacebookBoxFill, RiInstagramFill, RiMailAiFill, RiMapPin2Fill, RiPhoneFill, RiPinterestFill, RiTwitterFill, RiYoutubeFill } from "@remixicon/react";
+// import { RiFacebookBoxFill, RiInstagramFill, RiMailAiFill, RiMapPin2Fill, RiPhoneFill, RiPinterestFill, RiTwitterFill, RiYoutubeFill } from "@remixicon/react";
+
+// export const SiteConfig = {
+//   authorName: "Md Bappi",
+//   brandName: "Dubai Mobile Car Battery Replacement",
+//   url: "https://www.dubaicarbatteryreplacement.com",
+//   logo: "", 
+//   ogImage: "",
+//   email: "carbatteryreplace46@gmail.com",
+//   foundedYear: "2017",
+//   emailLink: "mailto:carbatteryreplace46@gmail.com",
+//   description:"Dubai Mobile Car Battery Replacement provides 24/7 fast, professional and reliable mobile battery replacement service at your doorstep across Dubai.",
+//   displayNumber: "+971 50 960 6374",
+//   numberCallLink: "tel:+971509606374",
+//   whatsappCallLink: "https://wa.me/971509606374",
+//   location: "Al Barsha First",
+//   streetAddress: "Sheikh Zayed Rd ",
+//   country: "Dubai",
+//   postalCode: "00000",
+//   GMB: {
+//     name: "Dubai Mobile Car Battery Replacement",
+//     placeId: "",
+//     cid: "",
+//     category: "Car Battery Shop",
+//     mapsLink: "https://maps.app.goo.gl/4uy48BNYQQSsC7MC9",
+//     embed:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.519935661272!2d55.200607999999995!3d25.118107000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6bbec39f339d%3A0x47afe5626875154c!2sMall%20of%20the%20Emirates!5e0!3m2!1sen!2sbd!4v1792586589168!5m2!1sen!2sbd",
+//     longitude: "",
+//   },
+
+// serviceAreas :[
+//   { name: "Al Karama" },
+//   { name: "Al Mankhool" },
+//   { name: "Damac Hills" },
+//   { name: "Business Bay" },
+//   { name: "Downtown Dubai" },
+//   { name: "Al Satwa" },
+//   { name: "DIFC" },
+//   { name: "Dubai Silicon Oasis" },
+//   { name: "Deira" },
+//   { name: "Dubai Marina" },
+//   { name: "Al Rigga" },
+//   { name: "Al Raffa" },
+//   { name: "Dubai Creek" },
+//   { name: "Al Jaddaf" },
+//   { name: "Zabeel First" },
+//   { name: "Dubai Festival City" },
+//   { name: "City Walk" },
+//   { name: "Jumeirah" },
+//   { name: "Al Quoz" },
+//   { name: "Al Hudaiba" },
+//   { name: "Al Jafiliya" }
+// ],
+
+//   operatingHours: [
+//     { day: "Saturday", hours: "24 Hours" },
+//     { day: "Sunday", hours: "24 Hours" },
+//     { day: "Monday", hours: "24 Hours" },
+//     { day: "Tuesday", hours: "24 Hours" },
+//     { day: "Wednesday", hours: "24 Hours" },
+//     { day: "Thursday", hours: "24 Hours" },
+//     { day: "Friday", hours: "24 Hours" },
+//   ],
+
+//   city: "Dubai",
+//   country: "UAE",
+
+//   navItems: [
+//     { name: "Home", href: "/" },
+//     { name: "Services", href: "/services" },
+//     { name: "Areas We Serve", href: "/area-we-serve" },
+//     { name: "About", href: "/about" },
+//     { name: "Contact", href: "/contact" },
+//     { name: "Blog", href: "/blog" },
+//   ],
+
+//   footerhrefs: [
+//     { title: "About Us", href: "/about" },
+//     { title: "Contact", href: "/contact" },
+//     { title: "Services", href: "/services" },
+//     { title: "Privacy Policy", href: "/privacy" },
+//     { title: "Terms of Service", href: "/terms" },
+//     { title: "Sitemap", href: "/sitemap.xml" },
+//   ],
+
+//   socialLinks: [
+//     { name: "Facebook", icon: RiFacebookBoxFill, href: "" },
+//     { name: "Instagram", icon: RiInstagramFill, href: "" },
+//     { name: "Pinterest", icon: RiPinterestFill, href: "" },
+//     { name: "X", icon: RiTwitterFill, href: "" },
+//     { name: "YouTube", icon: RiYoutubeFill, href: "" },
+//   ],
+
+//   contactLinks: [
+//     { name: "Map", icon: RiMapPin2Fill, href: this.mapsLink},
+//     { name: "Phone", icon: RiPhoneFill, href: this.numberCallLink},
+//     { name: "Email", icon: RiMailAiFill, href: this.emailLink},
+//   ],
+// };
+
+// export const {
+//   contactLinks,
+//   socialLinks,
+//   footerhrefs,
+//   navItems,
+//   serviceAreas,
+//   location,
+//   streetAddress,
+//   addressLocality,
+//   addressRegion,
+//   addressCountry,
+//   postalCode,
+//   mapsLink,
+//   embedMap,
+//   numberCallLink,
+//   whatsappCallLink,
+//   operatingHours,
+//   displayNumber,
+//   description,
+//   email,
+//   url,
+//   brandName,
+//   authorName,
+//   city,
+//   country,
+//   GMB,
+// } = SiteConfig;
+
+
+import {
+  RiFacebookBoxFill,
+  RiInstagramFill,
+  RiMailAiFill,
+  RiMapPin2Fill,
+  RiPhoneFill,
+  RiPinterestFill,
+  RiTwitterFill,
+  RiYoutubeFill,
+} from "@remixicon/react";
 
 export const SiteConfig = {
   authorName: "Md Bappi",
   brandName: "Dubai Mobile Car Battery Replacement",
   url: "https://www.dubaicarbatteryreplacement.com",
-  logo: "", 
+  logo: "",
   ogImage: "",
-  email: "dubaimobilecarbatteryreplacement@gmail.com",
+  email: "carbatteryreplace46@gmail.com",
   foundedYear: "2017",
-  emailLink: "mailto:dubaimobilecarbatteryreplacement",
-  description:"Dubai Mobile Car Battery Replacement provides 24/7 fast, professional and reliable mobile battery replacement service at your doorstep across Dubai.",
+  emailLink: "mailto:carbatteryreplace46@gmail.com",
+  description:
+    "Dubai Mobile Car Battery Replacement provides 24/7 fast, professional and reliable mobile battery replacement service at your doorstep across Dubai.",
   displayNumber: "+971 50 960 6374",
   numberCallLink: "tel:+971509606374",
   whatsappCallLink: "https://wa.me/971509606374",
   location: "Al Barsha First",
   streetAddress: "Sheikh Zayed Rd ",
+  addressLocality: "Al Barsha First",
+  addressRegion: "Dubai",
+  addressCountry: "UAE",
   country: "Dubai",
   postalCode: "00000",
   GMB: {
@@ -23,33 +164,34 @@ export const SiteConfig = {
     cid: "",
     category: "Car Battery Shop",
     mapsLink: "https://maps.app.goo.gl/4uy48BNYQQSsC7MC9",
-    embed:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.519935661272!2d55.200607999999995!3d25.118107000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6bbec39f339d%3A0x47afe5626875154c!2sMall%20of%20the%20Emirates!5e0!3m2!1sen!2sbd!4v1792586589168!5m2!1sen!2sbd",
+    embed:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.519935661272!2d55.200607999999995!3d25.118107000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6bbec39f339d%3A0x47afe5626875154c!2sMall%20of%20the%20Emirates!5e0!3m2!1sen!2sbd!4v1792586589168!5m2!1sen!2sbd",
     longitude: "",
   },
 
-serviceAreas :[
-  { name: "Al Karama" },
-  { name: "Al Mankhool" },
-  { name: "Damac Hills" },
-  { name: "Business Bay" },
-  { name: "Downtown Dubai" },
-  { name: "Al Satwa" },
-  { name: "DIFC" },
-  { name: "Dubai Silicon Oasis" },
-  { name: "Deira" },
-  { name: "Dubai Marina" },
-  { name: "Al Rigga" },
-  { name: "Al Raffa" },
-  { name: "Dubai Creek" },
-  { name: "Al Jaddaf" },
-  { name: "Zabeel First" },
-  { name: "Dubai Festival City" },
-  { name: "City Walk" },
-  { name: "Jumeirah" },
-  { name: "Al Quoz" },
-  { name: "Al Hudaiba" },
-  { name: "Al Jafiliya" }
-],
+  serviceAreas: [
+    { name: "Al Karama" },
+    { name: "Al Mankhool" },
+    { name: "Damac Hills" },
+    { name: "Business Bay" },
+    { name: "Downtown Dubai" },
+    { name: "Al Satwa" },
+    { name: "DIFC" },
+    { name: "Dubai Silicon Oasis" },
+    { name: "Deira" },
+    { name: "Dubai Marina" },
+    { name: "Al Rigga" },
+    { name: "Al Raffa" },
+    { name: "Dubai Creek" },
+    { name: "Al Jaddaf" },
+    { name: "Zabeel First" },
+    { name: "Dubai Festival City" },
+    { name: "City Walk" },
+    { name: "Jumeirah" },
+    { name: "Al Quoz" },
+    { name: "Al Hudaiba" },
+    { name: "Al Jafiliya" },
+  ],
 
   operatingHours: [
     { day: "Saturday", hours: "24 Hours" },
@@ -62,8 +204,7 @@ serviceAreas :[
   ],
 
   city: "Dubai",
-  country: "UAE",
-
+  
   navItems: [
     { name: "Home", href: "/" },
     { name: "Services", href: "/services" },
@@ -91,9 +232,9 @@ serviceAreas :[
   ],
 
   contactLinks: [
-    { name: "Map", icon: RiMapPin2Fill, href: ""},
-    { name: "Phone", icon: RiPhoneFill, href: "tel: "},
-    { name: "Email", icon: RiMailAiFill, href: "mailto:" },
+    { name: "Map", icon: RiMapPin2Fill, href: "https://maps.app.goo.gl/4uy48BNYQQSsC7MC9" },
+    { name: "Phone", icon: RiPhoneFill, href: "tel:+971509606374" },
+    { name: "Email", icon: RiMailAiFill, href: "mailto:carbatteryreplace46@gmail.com" },
   ],
 };
 
@@ -104,13 +245,12 @@ export const {
   navItems,
   serviceAreas,
   location,
+  emailLink,
   streetAddress,
   addressLocality,
   addressRegion,
   addressCountry,
   postalCode,
-  mapsLink,
-  embedMap,
   numberCallLink,
   whatsappCallLink,
   operatingHours,
@@ -124,4 +264,3 @@ export const {
   country,
   GMB,
 } = SiteConfig;
-

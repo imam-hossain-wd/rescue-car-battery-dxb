@@ -105,7 +105,7 @@ export default function ContactPage() {
     {
       icon: RiMapPin2Fill,
       label: "Location",
-      value: location,
+      value: `${streetAddress }, ${location}, ${city}, ${addressCountry}`,
       href: mapsLink || "#",
       color: "from-[#FFC400]/20 to-[#FFC400]/5",
       iconColor: "text-[#FFC400]",
@@ -348,7 +348,7 @@ export default function ContactPage() {
                   <h3 className="text-sm font-bold text-white">Our Location</h3>
                 </div>
                 <p className="text-gray-400 text-sm">
-                  {streetAddress}, {addressLocality}, {addressRegion}, {addressCountry} {postalCode}
+                  {streetAddress}, {location}, {city}, {addressCountry}
                 </p>
                 {mapsLink && (
                   <Link
